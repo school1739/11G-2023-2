@@ -1,5 +1,5 @@
-a=int(input())
-b=int(input())
+a=float(input())
+b=float(input())
 s=(a*b)/43560
-print(s)
+print("%f" % s)
 
