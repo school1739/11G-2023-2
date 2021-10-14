@@ -1,5 +1,0 @@
-print("введите длину, ширину и высоту соответственно")
-a=int(input())
-b=int(input())
-c=int(input())
-print(a*b,a*c*2+b*c*2)
