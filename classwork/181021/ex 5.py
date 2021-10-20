@@ -1,4 +1,4 @@
-n=str(input())
+n = str(input())
 if n == 'январь':
     print('31')
 elif n == 'февраль':
