@@ -10,3 +10,4 @@ elif abs(x1-x2) == 2 and abs(y1-y2) == 1:
     print("YES")
 else:
     print("NO")
+    a < 31 and b == 3 or a < 31 and b == 5 or a < 31 and b == 7 or a < 31 and b == 8 or a < 31 and b == 10 or a < 31 and b == 12
