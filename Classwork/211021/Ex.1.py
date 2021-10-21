@@ -1,7 +1,7 @@
 print('Введите дату')
-a=int(input())
-b=int(input())
-c=int(input())
+a= int(input())
+b= int(input())
+c= int(input())
 if a<=30 and b==1 or a<=30 and b==3 or a<=30 and b==5 or a<=30 and b==7 or a<=30 and b==8 or a<=30 and b==10 or a<=30 and b==12:
     print(a+1,b,c)
 elif a==31 and b==1 or a==31 and b==3 or a==31 and b==5 or a==31 and b==7 or a==31 and b==8 or a==31 and b==10:
