@@ -128,7 +128,6 @@ for i in range(22, 31, 1):
 for i in range(0, 21, 1):
     st.append(str(st_2) + " декабря")
     st_2 += 1
-print(koz, vod, rib, ov, tel, bl, rak, lev, dev, ves, sk, st)
 if zz in koz:
     print("козерог")
 elif zz in vod:
