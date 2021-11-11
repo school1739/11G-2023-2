@@ -1,5 +1,0 @@
-lenght = int(input(" Введите длину: "))
-weight = int(input("Введите ширину: "))
-hight = int(input(" Введите высоту: "))
-print(lenght * weight * hight)
-print(lenght * hight)
