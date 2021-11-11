@@ -1,2 +1,2 @@
-#some initial shit
+# some initial shit
 print("Hello, world!")
