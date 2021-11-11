@@ -14,4 +14,5 @@ else:
     S=S+n
     K=K+1
     n=int(input())
+# Отобразим результат
    print(S/K)
