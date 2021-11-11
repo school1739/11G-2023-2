@@ -9,9 +9,9 @@ K = 0
 if n==0:
     print("Ошибка")
 else:
-    # Вводим цикл 'wile'
-    while n!=0:
-        S=S+n
-        K=K+1
-        n=int(input())
-print(S/K)
+# Вводим цикл 'wile'
+   while n!=0:
+    S=S+n
+    K=K+1
+    n=int(input())
+   print(S/K)
