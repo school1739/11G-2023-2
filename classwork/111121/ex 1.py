@@ -1,12 +1,12 @@
 n=int(input())
-s=0
+sum=0
 k=0
-while n !=0:
-    s=s+n
-    k=k+1
-    n = int(input())
-print(s/k)
-if n == 0:
-    print('ошибка')
+if n==0:
+    print('error')
 else:
-    print(s/k)
+    while n !=0:
+        sum+=k
+        k+=1
+        n = int(input())
+print(sum/k)
+
