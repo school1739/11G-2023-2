@@ -1,10 +1,14 @@
 c = int(input('цена: '))
 sum=0
-while c !='':
+n = ''
+while c!=n:
     sum+=c
     c = int(input('цена: '))
-    if (c % 5 ==0 ) and (c % 5 < 2.5):
-         print(int(c))
-    elif (c % 5 ==0 ) and (c % 5 > 2.5):
-        print(round(c))
+print(sum)
+if   c % 5 < 2.5:
+     int(c)
+elif   c % 5 > 2.5:
+    print(round(c))
+else:
+    print('нельзя расчитать остаток')
 
