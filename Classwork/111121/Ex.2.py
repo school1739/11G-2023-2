@@ -2,17 +2,11 @@
 ##
 # Запрашиваем у пользователя цены
 #
-cost=int(input())
+from math import *
+c=input()
 S=0
-while cost!= "" or cost!= " ":
-    S=S+cost
-    if S%5<=2:
-
-        print(S)
-
-        break
-    else:
-
-        print(S)
-
-        break
+while c!='':
+    S=S+c
+    c=input()
+    print(S)
+    print((round(S/5.0)*5))
