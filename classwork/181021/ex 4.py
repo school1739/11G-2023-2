@@ -18,3 +18,5 @@ else:
         print('девятиугольник')
     if n == 10:
         print('десятиугольник')
+
+# Evaluation: OK

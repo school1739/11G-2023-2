@@ -23,3 +23,5 @@ elif n == 'ноябрь':
     print('30')
 elif n == 'декабрь':
     print('31')
+
+# Evaluation: OK

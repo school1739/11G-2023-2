@@ -7,3 +7,5 @@ elif l1 == l2 or l2 == l3 or l1 == l3:
     print('равнобедренный  треугольник')
 else:
     print('разносторонний треугольник')
+
+# Evaluation: OK
