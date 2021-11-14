@@ -1,14 +1,10 @@
-c = int(input('цена: '))
+c = int(input('цена: '))#принимаем первое значение цены
 sum=0
 n = ''
-while c!=n:
-    sum+=c
-    c = int(input('цена: '))
+while c!=n: #пока значение с не равно пустой строке
+    sum+=int(c)
+    c = str(input('цена: '))
 print(sum)
-if   c % 5 < 2.5:
-     int(c)
-elif   c % 5 > 2.5:
-    print(round(c))
-else:
-    print('нельзя расчитать остаток')
+op = int(5 * round(sum / 5)) #округляем до пяти сумму
+print(op)
 
