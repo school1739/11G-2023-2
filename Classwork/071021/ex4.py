@@ -1,3 +1,5 @@
-lenght = int(input(" Введите длину "))
-weight = int(input("Введите ширину "))
-print(lenght * weight / 43560)
+lenght = int(input(" Введите длину ")) # *length
+weight = int(input("Введите ширину ")) # *width
+print(lenght * weight / 43560
+
+# Evaluation: OK
