@@ -23,3 +23,5 @@ if month == "ноябрь":
     print("30")
 if month == "декабрь":
     print("31")
+
+# Evaluation: +-OK. Стоит использовать elif.

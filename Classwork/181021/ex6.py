@@ -16,3 +16,5 @@ elif a == 130:
     print('Отбойный молоток')
 else:
     print('Выше максимального')
+
+# Evaluation: OK
