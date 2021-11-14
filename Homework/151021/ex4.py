@@ -6,3 +6,5 @@ def var_1():
     year_3 = year_2 * 1.04
     print(("{0:.2f}".format(year_1)), ("{0:.2f}".format(year_2)), ("{0:.2f}".format(year_3)))
 var_1()
+
+# Evaluation: ОК. Непонятно, зачем засовывать это всё в функцию.
