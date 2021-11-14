@@ -6,3 +6,5 @@ b = float('{:.2f}'.format(b))
 print(s)
 print(a)
 print(b)
+
+# Evaluation: Форматирование модное, расчёты неверные.

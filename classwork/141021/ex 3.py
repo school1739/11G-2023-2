@@ -4,3 +4,5 @@ n=p*754
 x=c*112
 sum=n+x
 print(sum)
+
+# Evaluation: OK

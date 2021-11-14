@@ -8,3 +8,5 @@ sum3 = float('{:.2f}'.format(sum3))
 print(sum1)
 print(sum2)
 print(sum3)
+
+# Evaluation: OK
