@@ -3,7 +3,7 @@
 import random
 
 print("Это игра в рулетку")
-user_number - int(input("Введите своё число"))
+user_number = int(input("Введите своё число")) # NameError: name 'user_number' is not defined
 user_color = str(input("Введите цвет (карсное, черное или зеленое) "))
 user_chet_nechet = str(input("Введите четное или нечетное число "))
 user_diapazon = str(input("Введите диапазон числа (от 0 - 18(цифра 1) / от 19 - 36(цифра 2)) "))
@@ -22,7 +22,7 @@ diapazon_2 = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
 mac_number = random.choice(all)
 
 print("Выпавшее число: " + str(mac_number))
-if user_number == comp_number:
+if user_number == comp_number: # NameError: name 'comp_number' is not defined. Did you mean: 'user_number'?
     print("Выигрышная ставка:" + str(mac_number))  #Grach_Fe
 
 if mac_number in red and user_color == "красное":
@@ -42,3 +42,10 @@ if mac_number in diapazon_1 and user_diapazon == 1:
 if mac_number in diapazon_2 and user_diapazon == 2:
     print("Выигрышная ставка от 19 до 36")
 #Grach_Fe
+
+# NameError: name 'user_number' is not defined, строка 6 (опечатка, ок)
+# NameError: name 'comp_number' is not defined. Did you mean: 'user_number'?
+# Переменная comp_number нигде более не встречается и, соответственно, не объявлена.
+
+# Evaluation: NOT OK. За старание респект! Но перехитрил сам себя, запутался и позабывал всякое важное.
+# Надо было просто прикрутить random(), без всяких вводов.

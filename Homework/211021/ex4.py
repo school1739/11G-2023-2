@@ -28,3 +28,5 @@ elif m == "30ноября":
     print("1 декабря" + " " + str(year))
 else:
     print(str(day + 1) + " " + str(month) + " " + str(year))
+
+# Evaluation: OK

@@ -22,3 +22,5 @@ print("Проц колл центрам: {0:.2f}".format(0.44))
 print("Налог: {0:.2f}".format(all_sum * 1.05 - all_sum))
 print("Вся сумма: {0:.2f}".format(all_sum * 1.05))
 #Grach_Fe
+
+# Evaluation: OK
