@@ -1,10 +1,10 @@
-c = int(input('цена: '))
+c = int(input('цена: '))#принимаем первое значение цены
 sum=0
-while c !='':
-    sum+=c
-    c = int(input('цена: '))
-    if (c % 5 ==0 ) and (c % 5 < 2.5):
-         print(int(c))
-    elif (c % 5 ==0 ) and (c % 5 > 2.5):
-        print(round(c))
+n = ''
+while c!=n: #пока значение с не равно пустой строке
+    sum+=int(c)
+    c = str(input('цена: '))
+print(sum)
+op = int(5 * round(sum / 5)) #округляем до пяти сумму
+print(op)
 

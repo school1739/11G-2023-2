@@ -4,7 +4,7 @@ k=0
 if n==0:
     print('error')
 else:
-    while n !=0:
+    while n !=0: # выводим среднее значение, пока введенное число не равно нулю
         sum+=k
         k+=1
         n = int(input())
