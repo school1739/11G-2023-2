@@ -6,3 +6,5 @@ t = round(c)
 m = round(h)
 d = (c+h) % 100
 print( str(m) + str(t) + str(d) + '₽' )
+
+# Evaluation: OK
