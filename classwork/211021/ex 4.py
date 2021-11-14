@@ -9,3 +9,6 @@ if (day >= 21 and day <= 31 and month == 3) or (day >= 1 and day <= 19 and month
         print("Овен")
 if (day >= 21 and day <= 31 and month == 3) or (day >= 1 and day <= 19 and month == 4):
         print("Овен")
+
+# Evaluation: Ты пытался. *datetime, отступы неправильные, а если даже это всё поправить, программа не работает,
+# нет вывода.
