@@ -6,3 +6,5 @@ d = b + c  + a
 print('Налог =', '%.2f' % b)
 print('Чаевые =', '%.2f' % c)
 print("Итог", "%.2f" % d)
+
+# Evaluation: OK
