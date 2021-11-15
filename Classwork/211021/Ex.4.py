@@ -51,10 +51,4 @@ elif c%12==6:
 elif c%12==7:
     print('Кролик')
 
-
-
-
-
-
-
-
+# Evaluation: OK
