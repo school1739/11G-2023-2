@@ -184,3 +184,5 @@ elif year in tigr:
     print("тигр")
 elif year in krolik:
     print("кролик")
+
+# Evaluation: OK. Где-то я уже видел точно такой код, с точно такими же блоками комментариев... Хмммм...

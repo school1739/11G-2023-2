@@ -51,3 +51,4 @@ if comp_number in diapazon_2 and user_diapazon == 2:
 
 
 
+# Evaluation: OK
