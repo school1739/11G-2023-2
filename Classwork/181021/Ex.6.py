@@ -16,3 +16,5 @@ elif a==40:
     print('Тихая комната')
 else:
     print("Ошибка")
+
+# Evaluation: OK

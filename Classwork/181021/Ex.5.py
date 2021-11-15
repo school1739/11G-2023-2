@@ -26,3 +26,5 @@ elif a=='Декабрь':
     print('31')
 else:
     print('Ошибка')
+
+# Evaluation: OK

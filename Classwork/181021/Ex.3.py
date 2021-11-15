@@ -6,3 +6,5 @@ elif l1=='y':
     print('И гласная и согласная')
 else:
     print("Согласная")
+
+# Evaluation: OK

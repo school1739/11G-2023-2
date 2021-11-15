@@ -18,3 +18,5 @@ elif a==10:
     print('Десятиугольник')
 else:
     print('Ошибка')
+
+# Evaluation: OK
