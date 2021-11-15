@@ -7,3 +7,5 @@ elif kolvo == 4:
     print("Квадрат")
 else:
     print("многоугольник")
+
+# Evaluation: OK

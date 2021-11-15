@@ -7,3 +7,5 @@ if db == 70:
     print("будильник")
 if db == 40:
     print("тихая комната")
+
+# Evaluation: OK

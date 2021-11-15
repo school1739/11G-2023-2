@@ -6,3 +6,5 @@ elif bukva == "y":
     print("гласная или согласная")
 else:
     print("Буква согласная")
+
+# Evaluation: OK
