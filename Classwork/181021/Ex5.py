@@ -5,3 +5,5 @@ elif x == 'Январь' or x =='Март' or x == 'Май' or x =='Июль' or
     print('31')
 else:
     print('28 и 29')
+
+# Evaluation: OK

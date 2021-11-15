@@ -5,3 +5,5 @@ elif x == 'y':
     print('Гласная и согласная')
 else:
     print('Согласная')
+
+# Evaluation: OK
