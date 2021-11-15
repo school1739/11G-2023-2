@@ -1,3 +1,2 @@
-# yep, it's the main file with code
-
+# some initial shit
 print("Hello, world!")
