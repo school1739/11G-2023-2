@@ -5,3 +5,5 @@ all = sum + sum_nalog + sum_tea
 print("{0:.2f}".format(sum_nalog))
 print("{0:.2f}".format(sum_tea))
 print("{0:.2f}".format(all))
+
+# Evaluation: OK
