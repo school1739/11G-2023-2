@@ -3,3 +3,5 @@ bottle_big = int(input("Введите количество бутылок, ко
 cost_bottle_small = bottle_small * 0.10
 cost_bottle_big = bottle_big * 0.25
 print(str(cost_bottle_small + cost_bottle_big) + "₽")
+
+# Evaluation: OK
