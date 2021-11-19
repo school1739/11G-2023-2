@@ -2,11 +2,12 @@
 ##
 # Запрашиваем у пользователя цены
 #
-from math import *
 c=input()
 S=0
-while c!='':
-    S=S+c
-    c=input()
-    print(S)
-    print((round(S/5.0)*5))
+while c!="": # проверка на пустую строку
+    S=S+int(c)
+    c = input()
+    if c=="":
+        S+=0
+print(S)
+print((round(S/5.0)*5))
