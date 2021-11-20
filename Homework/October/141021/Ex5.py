@@ -1,0 +1,10 @@
+import math
+a = int(input())
+b = int(input())
+print('Сумма  =', a+b)
+print('Разница =', a-b)
+print('Произведение =', a * b)
+print('Частное от деления =', a / b)
+print('Остаток от деления = ', a % b)
+print('Десятичный логарифм числа', a,'=', math.log10(a))
+print('Результат возведения числа =',  a**b)
