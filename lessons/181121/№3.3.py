@@ -8,7 +8,7 @@ while k != 5:
     rand = random.choice(l)
     l1.append(rand)
     if rand > max(l1):
-        print(str(rand) + " <== Обновление")
+        print(str(rand) + "Обновление")
         k += 1
 
     elif rand == 100:
@@ -17,5 +17,5 @@ while k != 5:
     else:
         print(rand)
 
-print("> Максимальное значение в ряду: 100>")
+print(" Максимальное значение в ряду: 100>")
 print("Количество смен максимального значения: 5")
