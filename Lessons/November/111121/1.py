@@ -1,11 +1,11 @@
-a=int(input())
-b=0
-c=0
-if a==0:
-    print("Error")#вывод ошибки при а=0
+a = int(input())
+b = 0
+c = 0
+if a == 0:
+    print("Error")  # если первое число 0 то error
 else:
-    while a!=0:#b-сумма вводимых чисел,с-кол-во вводимых чисел
-        b=b+a
+    while a != 0:  # цикл, пока а не равно 0
+        b = b + a  # сумма всех введенных чисел
         a = int(input())
-        c=c+1
-    print(b/c)
+        c = c + 1  # счетчик
+    print(b / c)
