@@ -7,11 +7,11 @@ pi = 3.1415926
 # Вычислим площадь круга
 print(round((pi * (radius ** 2)), 4))
 # Есть координаты двух точек
-sites = {'Point_1': (23, 34),
-         'Point_2': (30, 30),
-         }
-point_1 = sites["Point_1"]
-point_2 = sites["Point_2"]
+coordinates = {'Point_1': (23, 34),
+               'Point_2': (30, 30),
+               }
+point_1 = coordinates["Point_1"]
+point_2 = coordinates["Point_2"]
 # Если точка лежит внутри того самого круга [центр в начале координат (0, 0), radius = 42],
 # то выведем на консоль True, Или False, если точка лежит вовне круга.
 # Аналогично для другой точки
