@@ -10,7 +10,7 @@ sum_attempts=0
 for i in range(10): # Делаем 10 серий
     # Повторяем, пока не выпадет 3 одинакрых значения
     while counter<2:
-        coin=random.randint(0,1)
+        coin= random.randint(0,1)
         # Какое значение выводим на экран
         if coin==0:
             print("Р", end=" ")

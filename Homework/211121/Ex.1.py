@@ -2,16 +2,16 @@
 ##
 # Запрашиваем у пользователя число
 #
-a=int(input("Введите число: "))
-result=""
-while a!=0: # Задаём условие
-    ostatok=a%2 # Вычисляем остаток
-    celiy_otvet=a//2 # Вычисляем целую часть
-    print("Целая часть(ответ):", celiy_otvet, "Отстаток:", ostatok) # Выводим результат
+a = int(input("Введите число: "))
+result = ""
+while a != 0:  # Задаём условие
+    ostatok = a % 2  # Вычисляем остаток
+    celiy_otvet = a // 2  # Вычисляем целую часть
+    print("Целая часть(ответ):", celiy_otvet, "Отстаток:", ostatok)  # Выводим результат
     # Задаём условие для выводв резултата
-    if ostatok==1:
-        result=result+"1"
+    if ostatok == 1:
+        result = result + "1"
     else:
-        result=result+"0"
-    a=celiy_otvet
-print("Результат:",(result[::-1])) # Выводим конечный результат
+        result = result + "0"
+    a = celiy_otvet
+print("Результат:", (result[::-1]))  # Выводим конечный результат
