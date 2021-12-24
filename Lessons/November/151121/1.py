@@ -3,3 +3,5 @@ for i in range(a):
     print("")
     for j in range(a):  # цикл в цикле, с перемножением 2 переменных
         print(i * j, end="  ")
+
+# Evaluation: +-OK. Забыл форматированный вывод.
