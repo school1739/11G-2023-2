@@ -10,3 +10,5 @@ for row in range(max+1):
     for column in range(max+1):
         print(row*column, end='\t')
     print('')
+
+# Evaluation: OK

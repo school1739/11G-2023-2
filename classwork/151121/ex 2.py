@@ -6,3 +6,5 @@ while m!=n:
     else:
         n-=m
 print(n)
+
+# Evaluation: OK
