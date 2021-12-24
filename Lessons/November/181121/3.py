@@ -12,3 +12,5 @@ for i in range(100):  # цикл, в котором генерируется 100
         print(a)
 print("Максимум:", b)
 print("Кол-во обновлений:", c)
+
+# Evaluation: OK

@@ -9,3 +9,5 @@ for i in range(len(a)):  # цикл, в котором почленно скла
     b = d * (2 ** i)  # считаем формулу
     c = c + b  # счетчик
 print(c)
+
+# Evaluation: OK
