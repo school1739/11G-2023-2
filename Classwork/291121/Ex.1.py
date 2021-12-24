@@ -26,3 +26,5 @@ distances["Paris"]["Moscow"] = (str(prs_msc) + "km")
 distances["London"] = {}
 distances["London"]["Paris"] = (str(ldn_prs) + "km")
 print(distances)
+
+# Evaluation: OK
