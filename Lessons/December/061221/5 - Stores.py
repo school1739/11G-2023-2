@@ -56,3 +56,4 @@ print('Стол -', stol_amount, 'шт, стоимость', sum_stol, 'руб')
 print('Диван -', divan_amount, 'шт, стоимость', sum_divan, 'руб')
 print('Стул -', stul_amount, 'шт, стоимость', sum_stul, 'руб')
 
+# Evaluation: OK
