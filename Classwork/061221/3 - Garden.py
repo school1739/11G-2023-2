@@ -35,3 +35,5 @@ print(', '.join(only_garden))
 only_meadow = meadow_set - garden_set
 print('Цветы, которые растут на лугу, но не растут в саду:', end=" ")
 print(', '.join(only_meadow))
+
+# Evaluation: OK

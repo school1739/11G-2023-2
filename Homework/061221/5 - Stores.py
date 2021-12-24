@@ -67,3 +67,5 @@ for product_name in goods:
     # Обнуляем переменные для подсчёта по следующему товару
     quantity_product = 0
     cost = 0
+
+# Evaluation: OK
