@@ -16,3 +16,5 @@ else:
         n = int(input())
     # Отобразим результат
     print(S / K)
+
+# Evaluation: OK
