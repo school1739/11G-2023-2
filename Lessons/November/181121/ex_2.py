@@ -8,3 +8,5 @@ for i in range(len(l)):#цикл
     q = q + j#общая сумма
     k -= 1
 print(q)#вывод
+
+# Evaluation: OK
