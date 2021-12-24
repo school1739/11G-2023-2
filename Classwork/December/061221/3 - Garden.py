@@ -28,3 +28,5 @@ for flower in itamitam_set:
 
 # выведите на консоль те, которые растут на лугу, но не растут в саду
 # TODO здесь ваш код
+
+# Evaluation: Nothing to evaluate.
