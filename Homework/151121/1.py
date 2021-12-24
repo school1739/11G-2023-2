@@ -11,3 +11,5 @@ for i in range(0, kol_vo + 1): #цикл для kol_vo столбцов
     for q in range(0, kol_vo + 1): #цикл для kol_vo строк:)
         print(str(l[i] * d[q]), end = "\t" )
     print()
+
+# Evaluation: +-OK. Лишние строчки и столбики в выводе.
