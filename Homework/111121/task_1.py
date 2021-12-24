@@ -15,3 +15,5 @@ else:
 ever = sum_N/i
 # Отображаем результат
 print(ever)
+
+# Evaluation: OK

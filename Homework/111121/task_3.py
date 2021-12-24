@@ -51,3 +51,6 @@ len_last_side = len_side_polygon((x2, first_point_x), (y2, first_point_y))
 P += len_first_side + len_last_side
 # Выводим результат
 print("Периметр многоугольника равен %.2f" % P)
+
+# Evaluation: +-OK. Слишком много запрашивается точек. Надо было сделать так, чтобы при вводе пустого очередного X,
+# программа заканчивалась.

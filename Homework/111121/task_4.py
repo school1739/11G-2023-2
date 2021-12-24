@@ -30,3 +30,5 @@ change = ceil(total_price/1000) * 1000 - total_price
 print("Общая стоимость для посещения зоопарка группой: ₽", total_price, sep="")
 # Выводим размер сдачи с тысячи рублей
 print("Сдача с ближайшей тысячи рублей: ₽", change, sep="")
+
+# Evaluation: OK

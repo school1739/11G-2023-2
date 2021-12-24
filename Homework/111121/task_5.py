@@ -26,3 +26,5 @@ while data_packet != "":
         print("Ошибка! Вы ввели не 8 бит или символ не равный 1 или 0!")
         error_1_0 = 0
         data_packet = input("Введите 8 бит (1 или 0) (Enter для окончания ввода): ")
+
+# Evaluation: OK
