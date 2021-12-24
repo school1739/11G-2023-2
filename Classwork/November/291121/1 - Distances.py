@@ -23,3 +23,5 @@ distances['Moscow']['London']=(str(msc_ldn) + 'km')
 # TODO здесь заполнение словаря
 
 print(distances)
+
+# Evaluation: Nothing to evaluate.
