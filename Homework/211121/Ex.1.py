@@ -15,3 +15,5 @@ while a != 0:  # Задаём условие
         result = result + "0"
     a = celiy_otvet
 print("Результат:", (result[::-1]))  # Выводим конечный результат
+
+# Evaluation: OK

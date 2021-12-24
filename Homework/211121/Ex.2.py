@@ -24,3 +24,5 @@ for i in range(0, len(number)):
 print(result)
 print("Ответ:")
 print(f"{number}(2)={result}(10)")
+
+# Evaluation: OK

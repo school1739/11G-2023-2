@@ -38,3 +38,5 @@ elif nomer_formuly == "3":
         pi = pi + ((-1) ** k) / (2 * k + 1)
     final_pi_3 = round(4 * pi, int(kolichestvo_znakov))  # округление π до нужного количества занков
     print(final_pi_3)
+
+# Evaluation: +-OK. А где запрос точности?

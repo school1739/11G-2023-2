@@ -25,3 +25,5 @@ while counter != 101:
 # Выводим искомые значения
 print("Максимальное значение в ряду:", max_number)
 print("Количество смен максимального значения:", kolichestvo_smen)
+
+# Evaluation: OK
