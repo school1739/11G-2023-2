@@ -14,3 +14,5 @@ sites = {
 
 print(distances)
 #Не совсем понял чего от меня хотят
+
+# Evaluation: Nothing to evaluate. Да камон, на уроке же разбирали!

@@ -18,3 +18,5 @@ if t_2 < radius:
     print(True)
 else:
     print(False)
+
+# Evaluation: OK

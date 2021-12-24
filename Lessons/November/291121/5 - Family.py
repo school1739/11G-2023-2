@@ -14,3 +14,5 @@ for i in range(len(my_family_height)):
     summa += my_family_height[i][1]
 
 print("Общий рост моей семьи - " + str(summa))
+
+# Evaluation: OK
