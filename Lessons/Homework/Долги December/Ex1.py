@@ -35,3 +35,5 @@ distances['Paris']['Moscow'] = distance_MSK_PAR
 distances['Paris']['London'] = distance_LND_PAR
 # Выводим результат
 print(distances)
+
+# Evaluation: OK
