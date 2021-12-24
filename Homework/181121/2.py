@@ -8,3 +8,5 @@ for i in range(len(l)):
     q = q + j
     k -= 1
 print(q)
+
+# Evaluation: OK
