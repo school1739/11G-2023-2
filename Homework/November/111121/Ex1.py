@@ -9,3 +9,5 @@ else:
         k += n
         n = int(input())
     print(s/k)
+
+# Evaluation: NOT OK

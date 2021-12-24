@@ -12,3 +12,16 @@ while age!="":
         s+=250
     age = int(input())
 print(s) # Результат
+
+# Evaluation: NOT OK. Бесконеченый цикл
+# 1
+# 43
+# 23
+# 89
+# 0
+# 43
+# амвы
+# Traceback (most recent call last):
+#   File "/Homework/November/111121/Ex4.py", line 13, in <module>
+#     age = int(input())
+# ValueError: invalid literal for int() with base 10: 'амвы'
