@@ -5,3 +5,5 @@ while byte != "":#снова создание цикла
     elif byte_count % 2 == 0: print("Бит четности = 1")  #определяем бит четности
     elif byte_count % 2 != 0: print("Бит четности = 0")
     byte = str(input("Введите 8 бит ")) #ну и еще раз запрашиваем строку:)
+
+# Evaluation: OK

@@ -9,3 +9,5 @@ while n != 0:
     c = c + n
     if n == 0:
         print(c / k)
+
+# Evaluation: OK

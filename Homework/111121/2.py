@@ -7,3 +7,5 @@ while cent != "":
         break
 print(k)
 print((k + (-k % 5)))
+
+# Evaluation: OK

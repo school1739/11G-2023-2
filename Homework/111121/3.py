@@ -10,3 +10,5 @@ sd = all_sum // 1000
 
 print("Общая стоимость всех билетов = " + str(all_sum))
 print("Сдача с ближайшей тысячи = "+ str((((sd + 1) * 1000) - all_sum)))
+
+# Evaluation: OK
