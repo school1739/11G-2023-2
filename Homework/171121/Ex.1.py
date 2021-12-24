@@ -14,3 +14,5 @@ for i in range(min, max + 1):
     for k in range(min, max + 1):
         print("%4d" % (i * k), end="")
     print()
+
+# Evaluation: OK
