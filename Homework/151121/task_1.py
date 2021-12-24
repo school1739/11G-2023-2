@@ -19,3 +19,5 @@ for i in range(min_num, max_num + 1):
     for j in range(min_num, max_num + 1):
         print(j * i, end="\t")
     print()
+
+# Evaluation: OK

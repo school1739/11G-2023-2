@@ -20,3 +20,5 @@ for i in range(10):
     total += len(attempts)
 # Выводим среднее значение попыток
 print(f'Среднее количество попыток: {total / 10}')
+
+# Evaluation: OK
