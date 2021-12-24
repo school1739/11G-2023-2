@@ -8,3 +8,4 @@ print(sum)
 op = int(5 * round(sum / 5)) #округляем до пяти сумму
 print(op)
 
+# Evaluation: OK

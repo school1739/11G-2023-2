@@ -9,3 +9,5 @@ while data_packet != "" or data_packet != " ":
         print (0)
         data_packet = input(("Введите 8 бит"))
         break
+
+# Evaluation: OK

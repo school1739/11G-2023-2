@@ -16,3 +16,5 @@ n=1000
 while sum>n:
     n+=1000
 print(n-sum) #считаем сдачу
+
+# Evaluation: OK
