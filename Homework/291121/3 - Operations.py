@@ -13,3 +13,5 @@ print(result)
 f = 1 * (2 + 3) + 4 * 5
 # Выводим значение на консоль
 print(f)
+
+# Evaluation: OK

@@ -25,3 +25,5 @@ sum_height = sum([i[1] for i in my_family_height])
 print(f"Общий рост моей семьи - {sum_height} см")
 # Пример вывода на консоль:
 # Общий рост моей семьи - ХХ см
+
+# Evaluation: OK
