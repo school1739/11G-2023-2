@@ -12,3 +12,5 @@ while a != 0:
     i += 1
     if a == 0:
         print(b / i)  # you get the average sum of numbers which you inputted earlier
+
+# Evaluation: OK
