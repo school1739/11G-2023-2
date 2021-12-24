@@ -35,3 +35,5 @@ a_set=meadow_set-a_set
 for i in a_set:
     print(i)
 print("")
+
+# Evaluation: OK
