@@ -20,3 +20,5 @@ while a1!=0:
     if a1!=0:
         print(' +',end=' ')
 print(' = ',result)
+
+# Evaluation: +-OK. В первой строке пусто после знака "=".

@@ -23,3 +23,5 @@ else:
     for i in range(4, c * 1000000, 4):
         pi += -1 / (3 + i) + 1 / (5 + i)
     print(round((pi * 4), b))
+
+# Evaluation: OK
