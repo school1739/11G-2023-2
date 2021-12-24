@@ -9,3 +9,5 @@ else:
         a = int(input())
         c = c + 1  # счетчик
     print(b / c)
+
+# Evaluation: OK
