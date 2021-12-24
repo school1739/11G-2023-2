@@ -26,3 +26,5 @@ print(' '.join(garden_meadow))
 # TODO здесь ваш код
 meadow_garden = meadow_set - garden_set
 print(' '.join(meadow_garden))
+
+# Evaluation: OK. Не забывай удалять TODO!
