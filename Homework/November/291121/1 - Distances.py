@@ -37,3 +37,9 @@ distances["London"]["Paris"] = str(london_to_paris) + " km"
 # функция вывода словаря
 for i in distances:
     print(i, distances[i])
+
+# Evaluation: NOT OK
+# Traceback (most recent call last):
+#   File "/Homework/November/291121/1 - Distances.py", line 20, in <module>
+#     moscow_to_London = math.sqrt(((moscow[0] - london[0]) ** 2 + (moscow[1] - london[1]) ** 2))
+# NameError: name 'math' is not defined
