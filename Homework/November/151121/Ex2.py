@@ -8,3 +8,5 @@ else:
     while n % d !=0 or m % d !=0: # Наибольший общий делитель
         d -= 1
     print(d)
+
+# Evaluation: OK

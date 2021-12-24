@@ -27,3 +27,5 @@ for i in range(10):
     counter=0
     attempts=0
 print("Среднее количество попыток:",sum_attempts/10) # Выводим среднее количество попыток
+
+# Evaluation: OK
