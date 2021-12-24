@@ -46,3 +46,4 @@ chairs_cost = store[goods['Стул']][0]['quantity'] * store[goods['Стул']]
 print('Стул -',
       store[goods['Стул']][0]['quantity'] + store[goods['Стул']][1]['quantity'] + store[goods['Стул']][2]['quantity'],
       'шт, стоимость', chairs_cost, 'руб')
+# Evaluation: OK

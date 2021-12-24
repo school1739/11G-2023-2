@@ -37,3 +37,5 @@ distances["London"]["Paris"] = str(london_to_paris) + " km"
 # функция вывода словаря
 for i in distances:
     print(i, distances[i])
+
+# Evaluation: Why do you even exist?

@@ -28,3 +28,5 @@ print(secret_message[1][9:13], end=' ')
 print(secret_message[2][5:15:2], end=' ')
 print(secret_message[3][7:13][::-1], end=' ')
 print(secret_message[4][16:21][::-1])
+
+# Evaluation: OK
