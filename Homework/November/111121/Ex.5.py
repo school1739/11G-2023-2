@@ -13,3 +13,9 @@ while data_of_packet != "":
     else:
         print("ur number of bites is incorrect")
         break
+
+# Evaluation: NOT OK
+# enter the 8 bites. P.S. 1 or 0:11001100
+# 1
+# enter the 8 bites. P.S. 1 or 0:10000000
+#
