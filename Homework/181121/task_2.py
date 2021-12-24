@@ -45,3 +45,5 @@ print()
 # Выводим результат в виде ответа
 print("Ответ:")
 print(f"{num}(2) = {result}(10)")
+
+# Evaluation: OK

@@ -19,3 +19,5 @@ while n != 0:
     n = integer
 # Выводим результат
 print("Результат:", result)
+
+# Evaluation: OK
