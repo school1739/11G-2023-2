@@ -30,3 +30,5 @@ for flower in only_in_garden_set:
 only_in_meadow_set = meadow_set - garden_set
 for flower in only_in_meadow_set:
     print(flower)
+
+# Evaluation: NOT OK. Что это за вывод отдельных цветов?

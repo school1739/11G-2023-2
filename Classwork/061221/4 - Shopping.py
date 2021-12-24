@@ -46,3 +46,5 @@ sweets = {
         {'shop': 'магнит', 'price': 62.99},
     ],
 }
+
+# Evaluation: Nothing to evaluate.

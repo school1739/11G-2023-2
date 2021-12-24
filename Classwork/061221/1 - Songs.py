@@ -48,3 +48,5 @@ T_t_S = pocket_universe_songs['To the Sea']
 B_M = pocket_universe_songs['Beyond Mirrors']
 dlitelnost = round(O_T + T_t_S + B_M)
 print("А другие три песни звучат приблизительно", dlitelnost, "минут")
+
+# Evaluation: OK
