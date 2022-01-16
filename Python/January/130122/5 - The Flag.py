@@ -1,10 +1,52 @@
+import random
+
 import simple_draw as sd
 
 # Нарисовать флаг России с древком
-
+left_bottom=sd.get_point(125,425)
+right_top=sd.get_point(475,500)
+COLOR_WHITE=(255,255,255)
+sd.rectangle(left_bottom, right_top, color=COLOR_WHITE, width=0)
+left_bottom=sd.get_point(125,350)
+right_top=sd.get_point(475,425)
+COLOR_BLUE=(0,0,250)
+sd.rectangle(left_bottom, right_top, color=COLOR_BLUE, width=0)
+left_bottom=sd.get_point(125,275)
+right_top=sd.get_point(475,350)
+COLOR_RED=(255,0,0)
+sd.rectangle(left_bottom, right_top, color=COLOR_RED, width=0)
+left_bottom=sd.get_point(115,100)
+right_top=sd.get_point(125,500)
+COLOR_DARK_YELLOW=(127,127,0)
+sd.rectangle(left_bottom, right_top, color=COLOR_DARK_YELLOW, width=0)
 # Вокруг флага добавить не менее пяти воздушных шариков (эллипс + треугольник "хвостик" + прямая линия "ниточка")
+left_bottom=sd.get_point(50,500)
+right_top=sd.get_point(80,550)
+colour=sd.random_color()
+sd.ellipse(left_bottom, right_top, color=colour, width=0)
+left_bottom=sd.get_point(500,450)
+right_top=sd.get_point(530,500)
+colour=sd.random_color()
+sd.ellipse(left_bottom, right_top, color=colour, width=0)
+left_bottom=sd.get_point(250,220)
+right_top=sd.get_point(280,270)
+colour=sd.random_color()
+sd.ellipse(left_bottom, right_top, color=colour, width=0)
+left_bottom=sd.get_point(60,100)
+right_top=sd.get_point(90,150)
+colour=sd.random_color()
+sd.ellipse(left_bottom, right_top, color=colour, width=0)
+left_bottom=sd.get_point(420,130)
+right_top=sd.get_point(450,180)
+colour=sd.random_color()
+sd.ellipse(left_bottom, right_top, color=colour, width=0)
 
 # На заднем фоне нарисовать не менее трёх феерверков (группы разноцветных кругов разного
 # относительно маленького диаметра, не менее 15 штук)
-
+for m in range(15):
+    point = sd.random_point()
+    colour = sd.random_color()
+    radius= random.randint(5,15)
+    sd.circle(center_position=point, radius=radius, color=colour, width=3)
+sd.pause()
 # Hint: для рисования однотипных объектов проще всего использовать функцию и цикл
