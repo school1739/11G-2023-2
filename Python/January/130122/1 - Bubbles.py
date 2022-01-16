@@ -1,27 +1,37 @@
+### Задание №1 "Bubbles"
 import simple_draw as sd
-def puzyirik(start, shag):
-    center_position = sd.get_point(56, 76)
-    COLOR_GREEN = (0, 255, 0)
-    sd.circle(center_position, radius=50, color=COLOR_GREEN, width=1)
-    sd.circle(center_position, radius=45, color=COLOR_GREEN, width=1)
-    sd.circle(center_position, radius=40, color=COLOR_GREEN, width=1)
+
+
+# функция для пузырика
+def puzyirik(point, step, colour):
+    radius = 50
+    for i in range(3):
+        radius -= step
+        sd.circle(center_position=point, radius=radius, color=colour, width=1)
+
+
 # Нарисовать пузырек - три вложенных окружности с шагом 5 пикселей
-center_position=sd.get_point(56,76 )
+point = sd.get_point(300, 300)
 COLOR_GREEN = (0, 255, 0)
-sd.circle(center_position, radius=50, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=45, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=40, color=COLOR_GREEN, width=1)
-sd.pause()
+radius = 50
+for i in range(3):
+    radius -= 5
+    sd.circle(center_position=point, radius=radius, color=COLOR_GREEN, width=1)
+
 # Написать функцию рисования пузырька, принимающую 2 (или более) параметра: точка рисовании и шаг
-
-start=sd.get_point(56,76 )
-COLOR_GREEN = (0, 255, 0)
-sd.circle(center_position, radius=50, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=45, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=40, color=COLOR_GREEN, width=1)
-
+# см. выше
 # Нарисовать 10 пузырьков в ряд
-
+for x in range(100, 1001, 100):
+    point = sd.get_point(x, 100)
+    puzyirik(point=point, step=5, colour=(0, 250, 0))
 # Нарисовать три ряда по 10 пузырьков
-
+for y in range(100, 301, 100):
+    for x in range(100, 1001, 100):
+        point = sd.get_point(x, y)
+        puzyirik(point=point, step=5, colour=(0, 250, 0))
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
+for m in range(100):
+    point = sd.random_point()
+    colour = sd.random_color()
+    puzyirik(point=point, step=5, colour=colour)
+sd.pause()
