@@ -1,46 +1,63 @@
-# Заданы размеры envelop_x, envelop_y - размеры конверта и paper_x, paper_y листа бумаги
+### Задание №2
+##
 #
-# Определить, поместится ли бумага в конверте (стороны листа параллельны сторонам конверта)
-#
-# Результат проверки вывести на консоль (ДА/НЕТ)
-# Использовать только операторы if/elif/else, можно вложенные
+# значения бумаги, данные для сравнения
+znacheniya_1 = [
+    [8, 9],
+    [9, 8],
+    [6, 8],
+    [8, 6],
+    [3, 4],
+    [11, 9],
+    [9, 11],
+]
 
-# АВТОМАТИЧЕСКИ проверить для:
-# paper_x, paper_y = 8, 9
-# paper_x, paper_y = 9, 8
-# paper_x, paper_y = 6, 8
-# paper_x, paper_y = 8, 6
-# paper_x, paper_y = 3, 4
-# paper_x, paper_y = 11, 9
-# paper_x, paper_y = 9, 11
-# (написать цикл для проверки)
+# Запрашиваем у пользователя значенеия
 
-# TODO здесь ваш код
+envelop_x = int(input("Введите значение длины: "))
+envelop_y = int(input("Введите значение ширины: "))
+k = 0
+# создаём цикл для проверки значений
+for _ in range(7):
+    if (znacheniya_1[k][0] < envelop_x and znacheniya_1[k][1] < envelop_y) or (
+            znacheniya_1[k][0] < envelop_y and znacheniya_1[k][1] < envelop_x):
+        print('Да')
+    else:
+        print('Нет')
+    k += 1
+# все значения кирпича, данные для сравнения
+znacheniya_2 = [
 
-# Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
-# могут быть в диапазоне от 1 до 1000)
-#
-# Определить, пройдет ли кирпич через отверстие (грани кирпича параллельны сторонам отверстия)
+    [11, 10, 2],
+    [11, 2, 10],
+    [10, 11, 2],
+    [10, 2, 11],
+    [2, 10, 11],
+    [2, 11, 10],
+    [3, 5, 6],
+    [3, 6, 5],
+    [6, 3, 5],
+    [6, 5, 3],
+    [5, 6, 3],
+    [5, 3, 6],
+    [11, 3, 6],
+    [11, 6, 3],
+    [6, 11, 3],
+    [6, 3, 11],
+    [3, 6, 11],
+    [3, 11, 6],
 
-# АВТОМАТИЧЕСКИ проверить для:
-# brick_x, brick_y, brick_z = 11, 10, 2
-# brick_x, brick_y, brick_z = 11, 2, 10
-# brick_x, brick_y, brick_z = 10, 11, 2
-# brick_x, brick_y, brick_z = 10, 2, 11
-# brick_x, brick_y, brick_z = 2, 10, 11
-# brick_x, brick_y, brick_z = 2, 11, 10
-# brick_x, brick_y, brick_z = 3, 5, 6
-# brick_x, brick_y, brick_z = 3, 6, 5
-# brick_x, brick_y, brick_z = 6, 3, 5
-# brick_x, brick_y, brick_z = 6, 5, 3
-# brick_x, brick_y, brick_z = 5, 6, 3
-# brick_x, brick_y, brick_z = 5, 3, 6
-# brick_x, brick_y, brick_z = 11, 3, 6
-# brick_x, brick_y, brick_z = 11, 6, 3
-# brick_x, brick_y, brick_z = 6, 11, 3
-# brick_x, brick_y, brick_z = 6, 3, 11
-# brick_x, brick_y, brick_z = 3, 6, 11
-# brick_x, brick_y, brick_z = 3, 11, 6
-# (написать цикл для проверки)
-
-# TODO здесь ваш код
+]
+# запрашиваем значения у пользователя
+hole_x = int(input("Введите значение длины: "))
+hole_y = int(input("Введите значение ширины: "))
+i = 0
+# создаём цикл для проверки
+for _ in range(18):
+    if (znacheniya_2[i][0] < hole_x and znacheniya_2[i][1] < hole_y) or (
+            znacheniya_2[i][1] < hole_x and znacheniya_2[i][2] < hole_y) or (
+            znacheniya_2[i][2] < hole_x and znacheniya_2[i][0] < hole_y):
+        print('Да')
+    else:
+        print('Нет')
+    i += 1
