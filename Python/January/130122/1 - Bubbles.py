@@ -1,14 +1,11 @@
-import simple_draw as sd
+import simple_daw as sd
 
 # Нарисовать пузырек - три вложенных окружности с шагом 5 пикселей
-center_position=sd.get_point(60, 80)
-COLOR_YELLOW=(0,255,0)
-sd.circle(center_position, radius=50, color=COLOR_YELLOW, width=1)
-sd.pause()
+point = sd.get_point(100,90 )
+sd.circle(center_position=point, radius=50, color=COLOR_BlUE, width=2)
 # Написать функцию рисования пузырька, принимающую 2 (или более) параметра: точка рисовании и шаг
 
 # Нарисовать 10 пузырьков в ряд
 
+# Нарисовать 100 пузырьков в произвольных   местах экрана случайными цветами
 # Нарисовать три ряда по 10 пузырьков
-
-# Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
