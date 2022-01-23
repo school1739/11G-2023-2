@@ -1,6 +1,10 @@
 import simple_draw as sd
 
 # Нарисовать флаг России с древком
+COLOR_RED = (255, 0, 0)
+r=sd.left_bottom()
+sd.rectangle(left_bottom=r, right_top, color=COLOR_YELLOW, width=0)
+
 
 # Вокруг флага добавить не менее пяти воздушных шариков (эллипс + треугольник "хвостик" + прямая линия "ниточка")
 
