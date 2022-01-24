@@ -7,3 +7,15 @@
 a, b = 179, 37
 
 # TODO здесь ваш код
+# Функия нужна для того, чтобы значения a и b не изменялись
+def delenie(a, b):
+    result = 0
+    while (a - b) > 0:
+        result += 1
+        a -= b
+    return result
+# Ответы для положительных или отрицательных чисел
+if (a<0 and b<0) or (a>0 and b>0):
+    print(f"Целочисленное деление {a} на {b} дает {delenie(abs(a), abs(b))}")
+else:
+    print(f"Целочисленное деление {a} на {b} дает -{delenie(abs(a), abs(b))+1}")
