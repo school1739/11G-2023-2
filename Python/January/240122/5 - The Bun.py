@@ -11,15 +11,13 @@ def bun_song(animal):
     print("На окошке стужон;")
     print("Я от дедушки ушел,")
     print("Я от бабушки ушел,")
-    if songs_strings == []:
-        print("И от тебя, " + animal + ", убегу!")
-    else:
-        print(" ".join(songs_strings))
-        print("И от тебя, " + animal + ", убегу!")
+    for string in songs_strings:
+        print(string)
+    print("И от тебя, " + animal + ", убегу!")
     songs_strings.append("Я от " + animal + " ушел,")
 
 
 songs_strings = []
-animals = ["заяцa", "лисы"]
+animals = ["заяцa", "лисы", 'волка','медведя']
 for animal in animals:  # вывод  песни
     bun_song(animal)
