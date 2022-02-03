@@ -15,4 +15,9 @@ import simple_draw
 #           вычисляем правый нижний и левый верхний углы кирпича
 #           рисуем кирпич
 
+sd.rectangle(left_bottom, right_top, color=COLOR_YELLOW, width=0)
+left_bottom=sd.get_point(x,y)
+right_top=sd.get_point(x,y)
+for i in range(100):
+    left_bottom
 simple_draw.pause()
