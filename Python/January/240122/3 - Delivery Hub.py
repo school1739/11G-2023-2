@@ -11,3 +11,5 @@ def tovar(kol):
     return(kyrs)
 kol=int(input())
 print(tovar(kol))
+
+# +-OK. Same -- глупый пользователь ничего не понимает.

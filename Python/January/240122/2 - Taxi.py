@@ -15,4 +15,4 @@ def stoimost(S):
 s=int(input())
 print(stoimost(s))
 
-
+# +-OK. Где подсказки для пользователя?
