@@ -19,3 +19,5 @@ if (a<0 and b<0) or (a>0 and b>0):
     print(f"Целочисленное деление {a} на {b} дает {delenie(abs(a), abs(b))}")
 else:
     print(f"Целочисленное деление {a} на {b} дает -{delenie(abs(a), abs(b))+1}")
+
+# OK

@@ -114,4 +114,6 @@ for bricks in size_of_brick:
     elif bricks[1] <= hole_x and bricks[2] <= hole_y:
         print("YES")
     else:
-        print("NO")
+        print("NO"
+
+# OK

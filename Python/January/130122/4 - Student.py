@@ -29,4 +29,6 @@ for month in months:
         print("Расходы:", round(expenses), "рублей")
         print("Студенту надо попросить", cash_by_parents, "рублей")
         print()
-    expenses *= 1.03
+    expenses *= 1.
+
+# OK
