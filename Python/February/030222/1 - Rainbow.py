@@ -35,3 +35,5 @@ for i in range(7):
     radius+=5
     sd.circle(center_position=point, radius=radius, color=rainbow_colors[i], width=5)
 sd.pause()
+
+# Для "плоской" радуги изменять надо только Х, чтобы линии не уезжали вверх.
