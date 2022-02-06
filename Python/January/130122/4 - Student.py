@@ -7,6 +7,18 @@
 #       Расходы: ХХХ.ХХ рублей.
 #   Студенту надо попросить ХХХ.ХХ рублей
 
-educational_grant, expenses = 10000, 12000
 
 # TODO здесь ваш код
+
+l = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь"]
+q = 0
+educational_grant, expenses = 10000, 12000
+print(l[q] + ": ")
+print("  Расходы: " + str(round(expenses, 2)))
+print("  Студенту нужно попросить " + str(expenses - educational_grant))
+for i in range(9):
+    q += 1
+    expenses = round(expenses * 1.03, 2)
+    print(l[q] + ": ")
+    print("  Расходы: " + str(expenses))
+    print("  Студенту нужно попросить " + str(round(expenses - educational_grant, 2)))

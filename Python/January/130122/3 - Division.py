@@ -7,3 +7,10 @@
 a, b = 179, 37
 
 # TODO здесь ваш код
+
+q = 0
+a, b = 179, 37
+while a > b:
+    a = a - b
+    q += 1
+print(q)
