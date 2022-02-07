@@ -14,7 +14,6 @@ import random
 summa_numbers_player_1 = 0
 summa_numbers_player_2 = 0
 
-
 def player_1():
     chislo_player_1 = random.randint(0, 1000)
     return chislo_player_1
@@ -25,9 +24,17 @@ def player_2():
     return chislo_player_2
 
 
+def cheat_mode():  #чит мод
+    f_pl1 = 0
+    f_pl2 = 0
+
+
+
 def sudia():
     global summa_numbers_player_1
     global summa_numbers_player_2
+
+
     for i in range(100):
         player_2()
         player_1()
@@ -40,14 +47,18 @@ def sudia():
         elif player_2() > player_1():
             summa_numbers_player_1 -= 1
             summa_numbers_player_2 += 1
-        if summa_numbers_player_1 >= 50:
+        elif summa_numbers_player_1 >= 50:
             print("WINNER is player 1 ")
-        if summa_numbers_player_2 >= 50:
+            break
+        elif summa_numbers_player_2 >= 50:
             print("WINNER is 2 player")
+            break
+        print(summa_numbers_player_1, summa_numbers_player_2)
 
-    print(summa_numbers_player_2, summa_numbers_player_1)
 
-#хрень с рандомом, не хвататет только его, определяется всего лишь 1 раз на все иттерации цикла
-#вызывать функцию возврата в цикле
+        if summa_numbers_player_2 - summa_numbers_player_1 == 3 or summa_numbers_player_1 - summa_numbers_player_2 == 3:
+            cheat_mode()
+
+
 sudia()
 
