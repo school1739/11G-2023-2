@@ -12,3 +12,5 @@ colichestvo = int(input("Введите количество товаров: "))
 
 # вызов функции
 sum(colichestvo)
+
+# OK

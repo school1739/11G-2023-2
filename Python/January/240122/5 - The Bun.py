@@ -21,3 +21,5 @@ songs_strings = []
 animals = ["заяцa", "лисы", 'волка','медведя']
 for animal in animals:  # вывод  песни
    bun_song(animal)
+
+# OK
