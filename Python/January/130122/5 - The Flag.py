@@ -63,3 +63,6 @@ balloon(balloon_center=[265, 245])
 balloon(balloon_center=[75, 125])
 balloon(balloon_center=[485, 155])
 sd.pause()
+
+# +-OK. Фейерверки -- это отдельные области, заполненные маленькими пузыриками,
+# а не концентрические круги.
