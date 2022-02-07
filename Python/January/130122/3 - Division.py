@@ -7,3 +7,5 @@ while x > b:
     x = x - b
     result += 1
 print('Целочисленное деление', a, 'на', b, 'даёт', result)
+
+# OK

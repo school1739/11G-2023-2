@@ -35,3 +35,5 @@ for i in range(18):
     else:
         print('Нет')
     b += 1
+
+# OK
