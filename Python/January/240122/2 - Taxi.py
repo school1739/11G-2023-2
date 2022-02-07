@@ -18,3 +18,7 @@ def function(a):
 print("Введите длину поездки")
 a = int(input())
 print(function(a), "rub")
+
+# +-OK. И снова что за деньги такие?
+"""43
+98.36666666666667 rub""""

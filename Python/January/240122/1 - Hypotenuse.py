@@ -15,3 +15,5 @@ print("Введите катеты")
 a = int(input())
 b = int(input())
 print(function(a, b))
+
+# OK

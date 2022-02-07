@@ -15,3 +15,6 @@ def function(a):
 print("Введите кол-во товаров")
 a = int(input())
 print(function(a), "rub")
+
+# +-OK. Да ты издеваешься!
+# 8122.500000000001 rub
