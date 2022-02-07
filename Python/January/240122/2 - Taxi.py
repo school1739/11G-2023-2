@@ -25,3 +25,5 @@ def amount(r):
 
 # Вызов функции
 amount(s)
+
+# OK

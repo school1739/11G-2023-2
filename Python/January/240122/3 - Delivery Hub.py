@@ -10,3 +10,5 @@ def count(k):
 
 # Вызов функции
 count(kol)
+
+# OK

@@ -42,3 +42,6 @@ songs = []
 animals = ["заяцa", 'волка','медведя']
 for animal in animals:  # вывод
     bunsong(animal)
+
+# NOT OK:
+# TypeError: list.append() takes exactly one argument (3 given)

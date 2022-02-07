@@ -16,3 +16,5 @@ def hypo(k1, k2):
 
 # Вызов функциии
 hypo(katet_1, katet_2)
+
+# OK

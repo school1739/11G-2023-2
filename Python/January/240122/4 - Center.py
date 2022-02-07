@@ -20,3 +20,5 @@ for i in range(10):
     s = "Добро пожаловать!"
     w = random.randint(1, 100)
     str(s, w)
+
+# OK
