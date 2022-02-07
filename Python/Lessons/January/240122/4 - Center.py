@@ -20,3 +20,5 @@ def center(s, w):
             sp += sps
         print(sp + s)
 center(input("Введите строку: "), int(input("Введите ширину окна: ")))
+
+# OK
