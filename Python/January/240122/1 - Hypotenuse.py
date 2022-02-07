@@ -8,3 +8,5 @@ from math import sqrt  #пеперь у нас есть корень :D
 def h(x1, x2):# на 2 катета
     print(sqrt(x1**2 + x2**2)) #расчет гипотенузы
 h(int(input("катет 1 ")), int(input("катет 2 ")))
+
+# OK

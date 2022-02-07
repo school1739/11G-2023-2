@@ -15,3 +15,5 @@ def taxi(km):
     r = random.uniform(1, 2.5) #рандомный кэф
     print(r * ( 4 + (cost * 0.25))) #вывод мами
 taxi(int(input("Введите км: ")))
+
+# OK
