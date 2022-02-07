@@ -22,3 +22,5 @@ for _ in range(5):
     s = "Привет! Как дела?"
     w = random.randint(1, 500)
     stroka(s, w)
+
+# OK
