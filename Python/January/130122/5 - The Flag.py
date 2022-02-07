@@ -103,3 +103,5 @@ for m in range(25):
     radius = random.randint(3, 60)
     sd.circle(center_position=point, radius=radius, color=colour, width=3)
 # Hint: для рисования однотипных объектов проще всего использовать функцию и цикл
+
+# +-OK. Нет фейерверков, рисование не упаковано в функции.

@@ -28,3 +28,9 @@ for i in range(100):
     c = sd.random_color()
     a(point=point, step=5, colour=colour)
 sd.pause()
+
+# NOT OK
+"""File "python.21-22-2\Python\January\130122\1 - Bubbles.py", line 17
+    for i in range(100, 1000, 100):
+    ^
+IndentationError: expected an indented block after function definition on line 16"""
