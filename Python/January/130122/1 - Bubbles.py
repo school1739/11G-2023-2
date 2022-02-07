@@ -37,3 +37,5 @@ for k in range(100):
    colour = sd.random_color()
    puzyirik(point=point, step=5, colour=colour)
 sd.pause()
+
+# OK

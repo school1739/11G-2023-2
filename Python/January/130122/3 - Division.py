@@ -9,3 +9,5 @@ while ostatok > t:
    ostatok = ostatok - t
    count += 1
 print('Целочисленное деление', f, 'на', t, 'даёт', count) # выводим результат
+
+# OK
