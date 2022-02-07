@@ -22,3 +22,5 @@ for i in range(9):
     print(l[q] + ": ")
     print("  Расходы: " + str(expenses))
     print("  Студенту нужно попросить " + str(round(expenses - educational_grant, 2)))
+
+# OK. Стипендию и расходы надо было запросить у пользователя.

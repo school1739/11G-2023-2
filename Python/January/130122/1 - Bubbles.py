@@ -42,3 +42,5 @@ for i in range(100):
     color = sd.random_color()
     puz(center_pos, color, 5)
 sd.pause()
+
+# OK
