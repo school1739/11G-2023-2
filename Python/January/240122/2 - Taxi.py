@@ -29,3 +29,5 @@ a = random.randint(0, 1)
 
 # вызов функции
 summa(dist)
+
+# OK
