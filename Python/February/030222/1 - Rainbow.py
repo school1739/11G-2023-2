@@ -12,3 +12,8 @@ import time
 
 for i in range (300. 1000.-1)
 time.simple(0.3)
+    sd.circle(center_position=point, radius=r, color=random_color[b], width=5)
+    b+=1
+    if b=7
+        break
+sd.pause()
