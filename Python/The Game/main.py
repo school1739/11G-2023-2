@@ -1,60 +1,93 @@
-"""Написать программу, где две функции -- "Игрок 1" и "Игрок 2"
-играют в игру, а третья функция -- "Судья" -- следит за ходом игры
-и ведёт счёт.
-
-Правила игры:
-Оба игрока кажый раунд выдают случайное целое число
-в некотором диапазоне. Судья сравнивает эти числа и начисляет игрокам очки:
-Если числа равны, оба игрока получают 1 очко (+1). Когда число одно из игроков
-больше другого, игрок, который выдал большее число, получает 1 очко (+1),
-другой игрок штрафуется на 1 очко (-1). Игра продолжается до тех пор, пока
-один из игроков не наберёт 50 очков, но не более 100 раундов."""
-
+### The Game
+##
+#
 import random
-
+# целая куча переменных, необходимых для счёта
+# числа игроков
 p1_number = 0
 p2_number = 0
+# счётчик очков игорков
+count_1 = 0
+count_2 = 0
+# счётчик раундов
+rounds = 0
+# счётчик проигрышей
+fails_1 = 0
+fails_2 = 0
+# счётчик читов
+cheat_1 = 0
+cheat_2 = 0
+# переменные для рандома первого и второго игрока
+x_0 = -1000
+x_1 = 1000
+y_0 = -1000
+y_1 = 1000
 
-
+# функция для первого игрока
 def p1():
     global p1_number
-    p1_number = random.randint(-1000, 1000)
+    global x_0
+    global x_1
+    p1_number = random.randint(x_0, x_1)
     return p1_number
 
-
+# функция для второго игрока
 def p2():
     global p2_number
-    p2_number = random.randint(-1000, 1000)
+    global y_0
+    global y_1
+    p2_number = random.randint(y_0, y_1)
     return p2_number
 
-
+# функция для судьи
 def judge():
     global p1_number
     global p2_number
-    count_1 = 0
-    count_2 = 0
-    rounds = 0
-    while rounds <=100 or count_1 <= 50 or count_2 <= 50:
-        if p1_number == p2_number:
-            count_1 += 1
-            count_2 += 1
-        elif p1_number > p2_number:
-            count_1 += 1
-            count_2 -= 1
-        else:
-            count_1 -= 1
-            count_2 += 1
-        print("Первый игрок: ", count_1)
-        print("Второй игрок: ", count_2)
-        rounds += 1
-    if count_1 == count_2:
-        print("Победила дружба")
-    elif count_2 < count_1:
-        print("Победил первый игрок")
+    global count_1
+    global count_2
+    global fails_1
+    global fails_2
+    # изменение показателей очков, в зависимости от выпонения условия
+    if p1_number == p2_number:
+        count_1 += 1
+        count_2 += 1
+    elif p1_number > p2_number:
+        count_1 += 1
+        count_2 -= 1
+        fails_2 += 1
     else:
-        print("Победил второй игрок")
+        count_1 -= 1
+        count_2 += 1
+        fails_1 += 1
+    # вывод очков
+    print("Первый игрок: ", count_1)
+    print("Второй игрок: ", count_2)
 
-
-p1()
-p2()
-judge()
+# условие для выполнения цикла
+while count_1 != 50 and count_2 != 50 and rounds != 100:
+    # проверяем кол-во проиграшей, увеличиваем показаетль чита
+    if fails_1 == 3:
+        cheat_1 += 5
+        fails_1 = 0
+    elif fails_2 == 3:
+        cheat_2 += 5
+        fails_2 = 0
+    # проверяем условие для работы чита
+    if cheat_1 >= random.randint(5, 100):
+        x_0 += 1000
+        x_1 += 1000
+    elif cheat_2 >= random.randint(5, 100):
+        y_0 += 1000
+        y_1 += 1000
+    # собственно, сама игра
+    judge()
+    p1()
+    p2()
+    rounds += 1
+# в зависимости от результатов, выводим победителя
+if count_1 == count_2:
+    print("Победила дружба")
+elif count_2 < count_1:
+    print("Победил первый игрок")
+else:
+    print("Победил второй игрок")
