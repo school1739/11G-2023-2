@@ -35,7 +35,7 @@ def bunsong(animal):
     for s in songs:
         print(s)
     print("И от тебя, ", animal, ", убегу!")
-    songs.append("Я от ", animal, " ушел,")
+    songs.append(animal)
 
 
 songs = []
