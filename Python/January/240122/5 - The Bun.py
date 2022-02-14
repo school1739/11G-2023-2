@@ -47,3 +47,5 @@ animals = ["зайца", "волка", "медведя", "лиса"]
 # Вывод песни циклом по списку через функцию bunSong()
 for animal in animals:
     bunSong(animal)
+
+# OK

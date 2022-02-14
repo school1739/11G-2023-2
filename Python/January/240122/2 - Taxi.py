@@ -23,3 +23,5 @@ distance = float(input("Введите расстояние поездки в к
 result = cost_trip(distance)
 # Выводим результат
 print(f"Сумма оплаты такси: {result:.2f}₽")
+
+# OK

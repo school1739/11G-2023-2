@@ -20,3 +20,5 @@ exchange_rate = 75
 cost_delivery = cost(quantity) * exchange_rate
 # Выводим результат
 print(f"Стоимость доставки: {cost_delivery:.2f}₽")
+
+# OK
