@@ -33,6 +33,7 @@ def bg_color(): #аммм, не работала функция sd.background_co
     width = 0
     sd.rectangle(start_point, end_point, color=color, width= width)
 bg_color()
+
 blocks()  #чет криво получилось правда, сверху не прорисовались почему-то:( так и знал, что прораб обманул и стену не достроил:(
 
 sd.pause()
