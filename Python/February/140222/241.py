@@ -3,6 +3,7 @@ split = file.readline()
 
 count = 0
 max = 0
+current = 0
 
 for i in range(len(split)):
     if split[i]=='X' and split[i+1]=='Y' and split[i+2]=='Z' and current ==0:
