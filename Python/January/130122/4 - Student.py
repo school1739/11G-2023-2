@@ -35,3 +35,5 @@ print()
 educational_grant2, expenses2 = (int(input("Введите ежемесячную стипендию: ")),
                                  int(input("Введите расходы на проживание: ")))
 summa_parent(educational_grant2, expenses2)
+
+# OK

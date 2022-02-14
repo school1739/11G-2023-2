@@ -88,3 +88,5 @@ for size in sizes_bricks:
         print("ДА")
     else:
         print("НЕТ")
+
+# OK
