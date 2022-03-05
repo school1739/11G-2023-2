@@ -59,7 +59,7 @@ def gamer_1(fails1_in_a_row):
     # Активированность чита
     if cheat(probability_cheat_1, fails1_in_a_row) is True:
         num1 += 1000
-    # print(probabilty_cheat1)
+     print(probabilty_cheat1)
     return num1
 
 
@@ -124,4 +124,4 @@ for i in range(10000):
         break
 
 if score_1 < 50 and score_2 < 50:
-    print(f'Никто не дошел до победого счета')
+    print(f'Никто не дошел до победного счета')
