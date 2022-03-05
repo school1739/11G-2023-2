@@ -16,8 +16,9 @@ def cheat(probabilty_cheat, amount_fails):
     # Вероятность срабатывания чита после 3 проигрышей подряд
     if probabilty <= probabilty_cheat and amount_fails >= 3:
         cheat = True
-        # print("    Cheat active")
+        # print("Cheat active")
     return cheat
+
 
 #  Насколько я понял, что вероятность срабатывания чмта включается после 3-ёх проигрышей подряд,
 #  но если это не правильно, то это - "and amount_fails >= 3" надо удалить
@@ -96,4 +97,4 @@ for i in range(10000):
         break
 
 if score_1 < 50 and score_2 < 50:
-    print(f'Никто не дошел до победого счета')
+    print('Никто не дошел до победого счета')
