@@ -1,4 +1,10 @@
+# классы
 class Player:
-    pass
+    def say(self):
+        print('Said sth')
 
-print(Player)
+Ivanov = Player()
+Petrov = Player()
+
+Ivanov.say()
+Petrov.say()
