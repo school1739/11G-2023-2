@@ -1,7 +1,8 @@
 import simple_draw as sd
 import random
+
 center_pos_ex = sd.get_point(300, 300)
-COLOR_white = (255, 255, 255) #библиотеку сюда
+COLOR_white = (255, 255, 255)  # библиотеку сюда
 sd.circle(center_pos_ex, radius=10, color=COLOR_white, width=1)
 
 # Нарисовать пузырек - три вложенных окружности с шагом 5 пикселей
@@ -13,19 +14,22 @@ for i in range(3):
     sd.circle(center_pos, radius=radius, color=color, width=3)
     radius += shag
 
+
 # Написать функцию рисования пузырька, принимающую 2 (или более) параметра: точка рисовании и шаг
 def puz(center_pos, color, shag):
     radius = 40
     for i in range(3):
         radius -= shag
         sd.circle(center_position=center_pos, radius=radius, color=color, width=2)
-center_pos = sd.get_point(50,400)
-puz(center_pos, (255,0,0), 5)
+
+
+center_pos = sd.get_point(50, 400)
+puz(center_pos, (255, 0, 0), 5)
 # Нарисовать 10 пузырьков в ряд
 x = 30
 for i in range(10):
     center_pos = sd.get_point(x, 100)
-    puz(center_pos, (255,0,0), 10)
+    puz(center_pos, (255, 0, 0), 10)
     x += 60
 
 # Нарисовать три ряда по 10 пузырьков

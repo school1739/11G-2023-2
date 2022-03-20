@@ -45,32 +45,34 @@
 
 # TODO здесь ваш код
 
-k, q = int(input()), int(input())#конверт
-b, p = int(input()), int(input())#бумага
+k, q = int(input()), int(input())  # конверт
+b, p = int(input()), int(input())  # бумага
 if (k >= b and q >= p) or (k >= p and q >= b):
     print("ДА")
 else:
     print("НЕТ")
-l = [8,9,6,8,3,11,9]
-n = [9,8,8,6,4,9,11]
+l = [8, 9, 6, 8, 3, 11, 9]
+n = [9, 8, 8, 6, 4, 9, 11]
 for i in range(len(l)):
     if (k >= l[i] and q >= n[i]) or (k >= n[i] and q >= n[i]):
         print("ДА")
     else:
         print("НЕТ")
-#№2
-a,b = int(input()), int(input())
-c,d,e= int(input()), int(input()),int(input())
+# №2
+a, b = int(input()), int(input())
+c, d, e = int(input()), int(input()), int(input())
 
-if (a >= c and b >= d) or (a >= c and b >= e) or (a >= d and b >= c) or (a >= d and b >= e) or (a >= e and b >= c) or (a >= e and b >= d):
+if (a >= c and b >= d) or (a >= c and b >= e) or (a >= d and b >= c) or (a >= d and b >= e) or (a >= e and b >= c) or (
+        a >= e and b >= d):
     print("ДА")
 else:
     print("НЕТ")
-l = [11,11,10,10,2,2,3,3,6,6,5,5,11,11,6,6,3,3]
+l = [11, 11, 10, 10, 2, 2, 3, 3, 6, 6, 5, 5, 11, 11, 6, 6, 3, 3]
 m = [10, 2, 11, 2, 10, 11, 5, 6, 3, 5, 6, 3, 3, 6, 11, 3, 6, 11]
 k = [2, 10, 2, 11, 11, 10, 6, 5, 5, 3, 3, 6, 6, 3, 3, 11, 11, 6]
 for i in range(len(l)):
-    if (a >= l[i] and b >= m[i]) or (a >= l[i] and b >= k[i]) or (a >= m[i] and b >= l[i]) or (a >= m[i] and b >= k[i]) or (a >= k[i] and b >= l[i]) or (a >= k[i] and b >= m[i]):
+    if (a >= l[i] and b >= m[i]) or (a >= l[i] and b >= k[i]) or (a >= m[i] and b >= l[i]) or (
+            a >= m[i] and b >= k[i]) or (a >= k[i] and b >= l[i]) or (a >= k[i] and b >= m[i]):
         print("ДА")
     else:
         print("НЕТ")

@@ -44,7 +44,7 @@ def cheat(probabilty_cheat, amount_fails):
     # Вероятность срабатывания чита после 3 проигрышей подряд
     if probabilty <= probabilty_cheat and amount_fails >= 3:
         cheat = True
-        # print("    Cheat active")
+        print("    Cheat active")
     return cheat
 
 #  Насколько я понял, что вероятность срабатывания чмта включается после 3-ёх проигрышей подряд,
