@@ -5,6 +5,19 @@ def globalSay(msg):
     print(msg)
 
 
+class Player_inCapsule:
+    def __init__(self, name, age):
+        print("Создан инкапуслированный игрок")
+        self.__name = name
+        self.__age = age
+
+    def say_name(self):
+        return self.__name
+
+    def say_age(self):
+        return self.__age
+
+
 class Player:
     def __init__(self, name):
         print("Конструктор создал игрока")
@@ -24,9 +37,17 @@ class Player:
 Ivanov = Player("Ivanoff")
 Petrov = Player("P.E. Trove")
 
-Ivanov.work = "School"
+print(f"Player name: {Ivanov.name}      Player age: {Ivanov.age}")
+print(f"Player name: {Petrov.name}      Player age: {Petrov.age}")
 
-Petrov.say(Ivanov.work)
-# Ivanov.say(Petrov.work)
+Ivanov.name = "Was Ivanoff once"
+Ivanov.age = 78
 
-Petrov.sayGlobal()
+print()
+print(f"Player name: {Ivanov.name}      Player age: {Ivanov.age}")
+
+print()
+Semenoff = Player_inCapsule("SemiOne", 55)
+
+print(Semenoff.say_age())
+print(Semenoff.say_name())
