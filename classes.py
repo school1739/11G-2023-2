@@ -125,9 +125,7 @@ print(rick.get_name())
 rick.set_name("Nick")
 print(rick.get_name())"""
 
-import random
-
-
+"""
 class Dude:
     def __init__(self, name):
         self.__name = name
@@ -160,3 +158,41 @@ rick = Dude("Rick")
 print(rick.name)
 rick.name = "Nick"
 print(rick.name)
+"""
+
+
+class Human:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):  # Геттер для имени
+        return self.__name
+
+    # Сеттер для имени где-то тут
+
+    def get_info(self):
+        print(f"Name: {self.__name}")
+
+
+class Worker(Human):
+    def __init__(self, name, company):
+        super().__init__(name)
+        self.company = company
+
+    def work(self):
+        print(f"{self.name} works")
+
+    def get_info(self):
+        super().get_info()
+        print(f"Company: {self.company}")
+
+
+Rick = Human("Rick")
+print(Rick.name)
+
+
+Nick = Worker("Nick", "Microsoft")
+print(Nick.name)
+print(Nick.company)
+Nick.get_info()
