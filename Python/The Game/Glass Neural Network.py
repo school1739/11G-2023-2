@@ -36,15 +36,15 @@ import random
 import os
 
 
-# Класс нейрона (стакана)
+# Класс нейрона (стаканчика)
 class Neuron:
-    # Положить числа в стаканы
+    # Положить бумажки в стаканчик
     def __init__(self):
         self.values = [1] * 5 + [2] * 5
         self.last_value = 0
         self.fails_in_row = 0
 
-    # Вытунять бумажку на рандом
+    # Взять случайную бумажку
     def choose(self):
         self.last_value = random.choice(self.values)
         return self.last_value
@@ -63,7 +63,7 @@ class Neuron:
         self.values.append(self.last_value)
         self.fails_in_row = 0
 
-    # Ресетнуть нейрон, если все пошло не по плану
+    # Ресетнуть нейрон, если всё плохо
     def reset(self):
         self.__init__()
 
@@ -118,7 +118,7 @@ def colored(value, color):
 def player_turn():
     choice = int(input('Сколько возьмёте палочек: 1 или 2?: '))
     if choice not in (1, 2):
-        print('ಠ╭╮ಠ')
+        print(':с')
         choice = player_turn()
     return choice
 
@@ -168,10 +168,10 @@ while True:
     print(colored('Осталась последняя палочка!', Color.CYAN))
     # Проверяем, кто проиграл
     if turn == 0:
-        print('ТЫ лох')
+        print('Я победил')
         bot.win()
     else:
-        print('Я лох')
+        print('Ты победил')
         bot.fail()
     # Выводим состояние нейросети
     print('\nСтаканчики:')
