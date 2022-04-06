@@ -1,106 +1,71 @@
 import random
 
-#Ну если честно, то очень мало чего понял:(
-#бред тут и с рандомом, и вообще со всем, понимаешь, что в одном классе надо заглобалить переменную, а она в другом совсем классе
-#и сделать это не получается... функциями гораздо проще:((
-#Пушу, чтобы хотя бы 2 не было, а списывать как-то не интересно)
+rounds = 0 #
+def cheater(cheat, count_cheat):
+    CHEAT = False
 
-range_numbers = [-1000, 1000]
+    if random.randint(5,100) <= cheat and count_cheat >= 3:
+        CHEAT = True
+    return CHEAT
 
 
-probability_cheat_1 = 0
-probability_cheat_2 = 0
-class cheat:
-    def cheats(self, probabilty_cheat, amound_fails):
-        cheat = False
-        probability = random.randint(0, 100)
-        self.probabilty = probability
-        if self.probabilty <= probabilty_cheat and amound_fails >= 3:
-            cheat = True
-        return cheat
-ch = cheat()
+count_1 = 0
+count_2 = 0
 
-class player_1:
-    def start_1(self, fails1_in_a_row):
-        global probability_cheat_1
-        global ch
-        global range_numbers
-        num1 = random.randint(*range_numbers)
+fails_1 = 0
+fails_2 = 0
 
-        # Повышение вероятности чита после 3 проигрышей подряд
-        if fails1_in_a_row == 3:
-            probability_cheat_1 += 5
-        # Активированность чита
-        if ch.cheats(probability_cheat_1, fails1_in_a_row) is True:
-            num1 += 1000
-        # print(probabilty_cheat1)
+class Player:
+    def __init__(self, name):
+        self.__name = name
+        self.cheat = 0
+        self.x=-1000
+        self.y=1000
+    def say_name(self):
+        return self.__name
+    def number(self, fails):
+        if fails == 3:
+            self.cheat += 5
+        if cheater(self.cheat, fails) is True:
+            self.x+=1000
+            self.y+=1000
+        self.num = random.randint(self.x, self.y)
+        return self.num # вывод числа
 
-        return num1
-pl_1 = player_1()
-class player_2:
-    def start_2(self, fails2_in_a_row):
+player_1 = Player("Dean")
+player_2 = Player("Sam")
 
-        global probability_cheat_2
-        global range_numbers
-        global ch
-        num2 = random.randint(*range_numbers)
-        # Повышение вероятности чита после 3 проигрышей подряд
-        if fails2_in_a_row == 3:
-            probability_cheat_2 += 5
-        # Активированность чита
-        if ch.cheats(probability_cheat_2, fails2_in_a_row) is True:
-            num2 += 1000
-        # print(probabilty_cheat2)
-        return num2
+class Judge:
 
-pl_2 = player_2()
-score_1 = 0
-score_2 = 0
+    def Game(self):
+        global fails_1, fails_2, count_1, count_2
+        number_1 = player_1.number(fails_1)
+        number_2 = player_2.number(fails_2)
+        if number_1 == number_2:
+            count_1 += 1
+            count_2 += 1
+            fails_1+=0
+            fails_2+=0
+        elif number_1 > number_2:
+            count_1 += 1
+            count_2 -= 1
+            fails_2 += 1
+        else:
+            count_1 -= 1
+            count_2 += 1
+            fails_1 += 1
 
-# Проигрыши и кол-во проигрышей подряд
-fails1, fails1_in_a_row = 0, 0
-fails2, fails2_in_a_row = 0, 0
-class referee:
-    def start_3(self):
-        global pl_2
-        global pl_1
-        global fails1, fails1_in_a_row
-        global fails2, fails2_in_a_row
-        global score_1, score_2
+        print( player_1.say_name() ," : ", count_1)
+        print( player_2.say_name() ," : ", count_2)
 
-        num_1 = pl_1.start_1(fails1_in_a_row)
-        num_2 = pl_2.start_2(fails2_in_a_row)
+judge = Judge()
 
-        if num_1 == num_2:
-            score_1 += 1
-            score_2 += 1
-            fails1_in_a_row, fails2_in_a_row = 0, 0
-            print("Ничья")
-        elif num_1 > num_2:
-            score_1 -= 1
-            score_2 += 1
-            fails1 += 1
-            fails1_in_a_row += 1
-            fails2_in_a_row = 0
-            print("Второй выиграл")
-
-        elif num_1 < num_2:
-            score_1 += 1
-            score_2 -= 1
-            fails2 += 1
-            fails1_in_a_row = 0
-            fails2_in_a_row += 1
-            return ("Первый выиграл")
-
-ref = referee()
-# Раунды
-for i in range(10000):
-    ref.start_3()
-    if score_1 == 50:
-        print(f'Первый победил в игре')
-        break
-    elif score_2 == 50:
-        print(f'Второй победил в игре')
-        break
-if score_1 < 50 and score_2 < 50:
-    print(f'Никто не дошел до победого счета')
+while count_1 != 50 and count_2 != 50 and rounds != 100:
+    judge.Game()
+    rounds+=1
+if count_1 == count_2:
+    print("Ничью")
+elif count_2 < count_1:
+    print("Победил первый игрок")
+else:
+    print("Победил второй игрок")
