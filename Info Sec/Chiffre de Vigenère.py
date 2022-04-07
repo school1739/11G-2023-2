@@ -5,30 +5,35 @@
 
 alphabet_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
-slovo = input("Слово, которое надо зашифровать - ")
-slovo = slovo.upper()
-al_ru = []
-for i in alphabet_RU:
-    al_ru.append(i)
+key_list=[]
+print("Выбирите язык, указав его порядковый номер.")
+print("1. Русский")
+print("2. Английский")
+n = input("Введите номер: ")
+if n =="1":
+    key_text = str.upper(input("KEY: "))
+    plain_text = str.upper(input("PLAIN: "))
+    
+    for key in key_text:
+        key_list+=key
+    if len(key_text)<len(plain_text):
+        for _ in range((len(plain_text)-len(key_text))//2+1):
+            key_list+=key_list
+    for i in range (len(plain_text)):
+        plain_index = alphabet_RU.find(plain_text[i])
+        key_index = alphabet_RU.find(key_list[i])+1
+        print(alphabet_RU[plain_index+key_index])
+else:
+    key_text = input("KEY: ")
+    plain_text = input("PLAIN: ")
 
-slovo_sp = []
-for i in slovo:
-    slovo_sp.append(i)
 
-shifr_slovo = []
-for i in range(len(slovo_sp)):
-    key = int(input("Величина сдвига(для каждой буквы отдельно)- "))
-    index = al_ru.index(slovo_sp[i])
-    index += key
-    shifr_slovo.append(al_ru[index])
-
-print(shifr_slovo)
-
-
-
-# HINT (использовать не обязательно):
-# Если буквы A-Z соответствуют числам 0-25, то код Виженера в общем виде выглядит так:
-#   Шифрование:
-#       Ci=(Pi+Ki) mod 26
-#   Расшифровка:
-#       Pi=(Ci-Ki+26) mod 26
+    for key in key_text:
+        key_list+=key
+    if len(key_text) < len(plain_text):
+        for _ in range(len(plain_text) - len(key_text)):
+            key_list += key_list
+    for i in range(len(plain_text)):
+        plain_index = alphabet_EU.find(plain_text[i])
+        key_index = alphabet_EU.find(key_list[i])+1
+        print(alphabet_EU[plain_index+key_index])
