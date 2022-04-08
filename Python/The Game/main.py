@@ -10,94 +10,111 @@
 другой игрок штрафуется на 1 очко (-1). Игра продолжается до тех пор, пока
 один из игроков не наберёт 50 очков, но не более 100 раундов."""
 
-import random
+from random import randint
 
-# Некоторый диапазон
-range_numbers = [-1000, 1000]
-
-
-def cheat(probabilty_cheat, amount_fails):
-    # Активированность чита
-    cheat = False
-    probabilty = random.randint(0, 100)
-    # Вероятность срабатывания чита после 3 проигрышей подряд
-    if probabilty <= probabilty_cheat and amount_fails >= 3:
-        cheat = True
-        print("---Чит активирован---")
-    return cheat
+max_rounds = 10000
+max_points = 50
 
 
-# Счет
-score_1 = 0
-score_2 = 0
-# Проигрыши и кол-во проигрышей подряд
-fails1_in_a_row = 0
-fails2_in_a_row = 0
-
-
-class Gamer:
-    def __init__(self, name):
-        print("Конструктор создал игрока")
-        self.name = name
-        self.probability_cheat = 0
-
-    def number(self, fails_in_a_row):  # Функция для числа, которое получает игрок
-        self.num = random.randint(*range_numbers)
-        if fails_in_a_row == 3:
-            self.probability_cheat += 5
-            if self.probability_cheat == 100:  # Если вероятность чита равна 100%, то она обнуляется, т.к. иначе было бы не честно
-                self.probability_cheat = 0
-        if cheat(self.probability_cheat, fails_in_a_row) is True:  # Чит
-            self.num += 1000
-        return self.num
-
-
-gamer_1 = Gamer("1")
-gamer_2 = Gamer("2")
-
-
-class Referee:
+# class player
+class Player:
+    # constructor
     def __init__(self):
-        print("Судья появился и готов следить за игрой")
+        self.points = 0
+        self.range = [-1000, 1000]
+        self.defeats_in_row = 0
+        self.cheat_chance = 0
 
-    def Game(self):  # Игра
-        global fails1_in_a_row
-        global fails2_in_a_row
-        global score_1, score_2
-        num_1 = gamer_1.number(fails1_in_a_row)
-        num_2 = gamer_2.number(fails2_in_a_row)
-        if num_2 == num_1:
-            score_1 += 1
-            score_2 += 1
-            fails1_in_a_row, fails2_in_a_row = 0, 0
-            print("Ничья")
-        elif num_2 > num_1:
-            score_1 -= 1
-            score_2 += 1
-            fails1_in_a_row += 1
-            fails2_in_a_row = 0
-            print("Второй выиграл")
-        elif num_2 < num_1:
-            score_1 += 1
-            score_2 -= 1
-            fails1_in_a_row = 0
-            fails2_in_a_row += 1
-            print("Первый выиграл")
+    # make_turn
+    def make_turn(self):
+        self.try_cheat()
+        return randint(*self.range)
+
+    # cheat after 3 loses
+    def try_cheat(self):
+        if self.defeats_in_row >= 3:
+            self.defeats_in_row = 0
+            self.cheat_chance += 5
+            if self.cheat_chance > 95:
+                self.cheat_chance = 95
+            if randint(0, 100) <= self.cheat_chance:
+                self.range[0] += 1000
+                self.range[1] += 1000
+
+    # win
+    def win(self):
+        self.defeats_in_row = 0
+
+    # draw
+    def draw(self):
+        self.win()
+
+    # lose
+    def lose(self):
+        self.defeats_in_row += 1
 
 
-Referee = Referee()
+# class judge
+class Judge:
+    # Конструктор класса
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
 
-# Раунды
-for i in range(10000):
-    Referee.Game()  # Раунд одной игры
-    print(f"Счёт 1 игрока:", score_1)
-    print(f"Счёт 2 игрока:", score_2)
-    if score_1 == 50:
-        print(f'Первый победил в игре')
+    # play_round
+    def iteration(self):
+        choice1 = self.player1.make_turn()
+        choice2 = self.player2.make_turn()
+        if choice1 == choice2:
+            self.player1.draw()
+            self.player2.draw()
+            self.add_points(1, 1)
+        elif choice1 > choice2:
+            self.player1.win()
+            self.player2.lose()
+            self.add_points(1, -1)
+        else:
+            self.player1.lose()
+            self.player2.win()
+            self.add_points(-1, 1)
+
+        if self.player1.points >= max_points and self.player2.points >= max_points:
+            return 'Ничья!'
+        if self.player1.points >= max_points:
+            return '1-ый игрок выиграл!'
+        if self.player2.points >= max_points:
+            return '2-ой игрок выиграл!'
+        return None
+
+    # rounds_over
+    def rounds_over(self):
+        if self.player1.points == max_points and self.player2.points >= max_points:
+            return 'Ничья!'
+        if self.player1.points > self.player2.points:
+            return '1-ый игрок выиграл!'
+        return '2-ой игрок выиграл!'
+
+    # add_points
+    def add_points(self, p1, p2):
+        self.player1.points += p1
+        self.player2.points += p2
+
+
+# player and judge
+player1 = Player()
+player2 = Player()
+judge = Judge(player1, player2)
+
+# cycle
+for i in range(max_rounds):
+    result = judge.iteration()
+
+    print(f'Ход {i + 1}. Очки: {(player1.points, player2.points)}. Ranges: {(player1.range, player2.range)}')
+
+    if result is not None:
+        print(result)
         break
-    elif score_2 == 50:
-        print(f'Второй победил в игре')
-        break
-    print()
-if score_1 < 50 and score_2 < 50:
-    print(f'Никто не дошел до победого счета')
+# rounds are over
+else:
+    print('Раунды кончились!')
+    print(judge.rounds_over())
