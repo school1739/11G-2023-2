@@ -2,7 +2,7 @@
 # Шифр Виженера представляет собой шифр Цезаря с переменной величиной сдвига.
 # Величину сдвига задают ключевым словом.
 # Например слово БАЗА означает последовательность сдвигов исходных букв: 219121912191...
-
+from itertools import
 alphabet_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -16,30 +16,33 @@ alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
 # P = Plain Text (изначальный текст)
 # K = Key (ключ)
 
-def endecrypt(text, alphabet, x):
-    shifts = [alphabet.find(i) + 1 for i in codeword]
+# функция для шифрования
+def vigenere_cipher(text: str, alphabet: str, encrypt: bool):
+    shifts = cycle([alphabet.find(i) + 1 for i in codeword])
     result = ''
-    for index, char in enumerate(text):
-        shift = shifts[index % len(shifts)]
-        if char == ' ':
-            result += ' '
+    for char in text:
+        if char not in alphabet:
+            result += char
         else:
-            result += alphabet[(alphabet.find(char) + shift * x) % len(alphabet)]
+            x = 1 if encrypt else -1
+            result += alphabet[(alphabet.find(char) + next(shifts) * x) % len(alphabet)]
     return result
 
 
-def encrypt(text, alphabet):
-    return endecrypt(text, alphabet, 1)
+# склейка функции
+def encrypt(text: str, alphabet: str):
+    return vigenere_cipher(text, alphabet, True)
 
 
-def decrypt(text, alphabet):
-    return endecrypt(text, alphabet, -1)
+# склейка для дешифратора
+def decrypt(text: str, alphabet: str):
+    return vigenere_cipher(text, alphabet, False)
 
 
 while True:
+    language = input('Язык (ru/en): ').lower()
     function = input('Зашифровать или дешифровать (з/д): ').lower()
     text = input('Текст: ').upper()
-    language = input('Язык (ru/en): ').lower()
     codeword = input('Кодовое слово: ').upper()
 
     if language == 'ru':
