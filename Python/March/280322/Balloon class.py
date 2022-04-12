@@ -1,28 +1,37 @@
 ### Balloons and Fireworks classes
 ##
 #
-import simple_draw as sd
 import random
 
-class Firework: # Основной класс фейерверка
-    def __init__(self, point):
-        self.color=sd.random_color()
-        self.point=point
+import simple_draw as sd
 
-class FireworkCenter(Firework): # Подкласс для большой центральной части фейерверка
+
+class Firework:  # Основной класс фейерверка
+    def __init__(self, point):
+        self.color = sd.random_color()
+        self.point = point
+
+
+class FireworkCenter(Firework):  # Подкласс для большой центральной части фейерверка
     def FC(self):
         for _ in range(15):
             radius = 6
-            sd.circle(center_position=sd.get_point(self.point[0]-random.randint(-50,50), self.point[1]-random.randint(-50,50)), radius=radius, color=self.color, width=0)
+            sd.circle(center_position=sd.get_point(self.point[0] - random.randint(-50, 50),
+                                                   self.point[1] - random.randint(-50, 50)), radius=radius,
+                      color=self.color, width=0)
 
-class FireworkAround(FireworkCenter): # Подкласс для маленьких фейерверков вокруг основного
+
+class FireworkAround(FireworkCenter):  # Подкласс для маленьких фейерверков вокруг основного
     def FA(self):
         for _ in range(5):
             for _ in range(15):
-                radius=3
-                sd.circle(center_position=sd.get_point(self.point[0]-random.randint(-100, 100), self.point[1]-random.randint(-100, 100)), radius=radius, color=self.color, width=0)
+                radius = 3
+                sd.circle(center_position=sd.get_point(self.point[0] - random.randint(-100, 100),
+                                                       self.point[1] - random.randint(-100, 100)), radius=radius,
+                          color=self.color, width=0)
 
-class Balloon: # Класс для шарика
+
+class Balloon:  # Класс для шарика
     def balloon(balloon_center):
         # сам шарик
         color = sd.random_color()
@@ -43,6 +52,7 @@ class Balloon: # Класс для шарика
                              sd.get_point(balloon_center[0], balloon_center[1] - 90)],
                  color=colour, width=1)
 
+
 sd.background_color = (0, 0, 0)
 # шарики
 b_1 = Balloon
@@ -51,31 +61,33 @@ for _ in range(15):
 # салюты
 fa_1 = FireworkAround((300, 300))
 fa_1.FA()
-f_1=FireworkCenter((300,300))
+f_1 = FireworkCenter((300, 300))
 f_1.FC()
 
 fa_2 = FireworkAround((125, 475))
 fa_2.FA()
-f_2=FireworkCenter((125,475))
+f_2 = FireworkCenter((125, 475))
 f_2.FC()
 
 fa_3 = FireworkAround((125, 125))
 fa_3.FA()
-f_3=FireworkCenter((125,125))
+f_3 = FireworkCenter((125, 125))
 f_3.FC()
-
 
 fa_4 = FireworkAround((475, 475))
 fa_4.FA()
-f_4=FireworkCenter((475,475))
+f_4 = FireworkCenter((475, 475))
 f_4.FC()
 
 fa_5 = FireworkAround((475, 125))
 fa_5.FA()
-f_5=FireworkCenter((475,125))
+f_5 = FireworkCenter((475, 125))
 f_5.FC()
 #  ещё шарики
 for _ in range(10):
     b_1.balloon((random.randint(0, 600), random.randint(0, 600)))
 
 sd.pause()
+
+# OK. Забыла подравнять отступы. Фейерверки прям отличные! Отдельно радует, что пуцки правильного цвета!
+# P.S.: fa_1, f_1 и т.д., то есть генератор шариков стоило бы упаковать в цикл и передавать рандомные координаты.
