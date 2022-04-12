@@ -62,7 +62,9 @@ class Balloon:  # Класс для шарика
         sd.line(sd.get_point(point.x - 5, point.y - 100), sd.get_point(point.x + 5, point.y - 120))
 
 
-for i in range(10): # Рисуем 10 шариков
+for i in range(10):  # Рисуем 10 шариков
     Balloon.balloon(sd.random_point())
 
 sd.pause()
+
+# OK. Пуцки должны быть одного цвета с шариками, так-то. Спасибо за комментарии.
