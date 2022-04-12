@@ -1,5 +1,6 @@
-import simple_draw as sd
 import random
+
+import simple_draw as sd
 
 """
 Задача: написать программу, выводящую на экран праздничный салют
@@ -18,11 +19,14 @@ import random
 Использование pygame и/или иных библиотек, кроме SD и random не допускается.
 """
 
-class Firework: # Основной класс фейерверка
+
+class Firework:  # Основной класс фейерверка
     pass
 
-class FireworkCenter(Firework): # Подкласс для большой центральной части фейерверка
+
+class FireworkCenter(Firework):  # Подкласс для большой центральной части фейерверка
     pass
+
     def draw_1(self):
         COLOR_WHITE = (255, 255, 255)
         COLOR_RED = (255, 0, 0)
@@ -35,7 +39,7 @@ class FireworkCenter(Firework): # Подкласс для большой цен�
             sd.circle(center_position=center_pos, radius=24, color=random.choice(colors_1), width=0)
 
 
-class FireworkAround(Firework): # Подкласс для маленьких фейерверков вокруг основного
+class FireworkAround(Firework):  # Подкласс для маленьких фейерверков вокруг основного
     def draw_2(self):
         COLOR_ORANGE = (255, 127, 0)
         COLOR_GREEN = (0, 255, 0)
@@ -49,10 +53,8 @@ class FireworkAround(Firework): # Подкласс для маленьких ф�
                 sd.circle(center_position=center_pos, radius=12, color=random.choice(colors_2), width=0)
 
 
-
-class Balloon: # Класс для шарика
+class Balloon:  # Класс для шарика
     def draw_3(balloon_center):
-
         COLOR_ORANGE = (255, 127, 0)
         COLOR_GREEN = (0, 255, 0)
         COLOR_CYAN = (0, 255, 255)
@@ -68,7 +70,6 @@ class Balloon: # Класс для шарика
                                sd.get_point(balloon_center[0] + 3, balloon_center[1] - 35)],
                    color=random.choice(colors_2), width=0)
 
-
         sd.lines(point_list=[sd.get_point(balloon_center[0], balloon_center[1] - 35),
                              sd.get_point(balloon_center[0], balloon_center[1] - 45),
                              sd.get_point(balloon_center[0] + 5, balloon_center[1] - 60),
@@ -76,8 +77,8 @@ class Balloon: # Класс для шарика
                              sd.get_point(balloon_center[0], balloon_center[1] - 90)],
                  color=random.choice(colors_2), width=1)
 
-sd.background_color = (0, 0, 0)
 
+sd.background_color = (0, 0, 0)
 
 fare = FireworkCenter()
 fare.draw_1()
@@ -90,3 +91,5 @@ for i in range(15):
     bal.draw_3((random.randint(0, 600), random.randint(0, 600)))
 
 sd.pause()
+
+# +-OK. Пуцки должны быть -- ОЧЕВИДНО -- такого же цвета, как основной шарик. Комментариев недостаточно.
