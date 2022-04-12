@@ -118,3 +118,5 @@ for i in range(max_rounds):
 else:
     print('Раунды кончились!')
     print(judge.rounds_over())
+
+# OK
