@@ -121,3 +121,8 @@ def player_turn():
         print(':с')
         choice = player_turn()
     return choice
+
+# NOT OK. При запуске программы ничего не происходит:
+# python.21-22-2/Python/march/нейронка.py
+#
+# Process finished with exit code 0
