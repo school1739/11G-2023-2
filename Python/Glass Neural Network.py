@@ -3,7 +3,7 @@
 #
 import random
 
-count = 0 # счётчик побед компьютера
+count = 0  # счётчик побед компьютера
 glass2 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 glass3 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 glass4 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
@@ -14,14 +14,14 @@ glass8 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 glass9 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 glass10 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 glass11 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
-Winner=""
+Winner = ""
 
-while count <= 4: # повторяем пока еомпьютер не победит 5 раз
+while count <= 4:  # повторяем пока еомпьютер не победит 5 раз
     print("На столе 11 палочек")
-    if Winner != "computer": # проходимся по всем стаканам, попутно выводя результат
+    if Winner != "computer":  # проходимся по всем стаканам, попутно выводя результат
         sticks = 11
         step1 = random.choice(glass11)
-        print("Компьютер забрал", step1, "палочек") # в целом, из принта видно, что мы делаем
+        print("Компьютер забрал", step1, "палочек")  # в целом, из принта видно, что мы делаем
         if step1 == 1:
             sticks -= 1
             number0 = 1
@@ -35,8 +35,8 @@ while count <= 4: # повторяем пока еомпьютер не побе
             sticks -= 1
         else:
             sticks -= 2
-        print("Осталось",sticks, "палочек")
-        if sticks == 9:                         # рассматриваем все возможные вариатны
+        print("Осталось", sticks, "палочек")
+        if sticks == 9:  # рассматриваем все возможные вариатны
             step2 = random.choice(glass9)
             print("Компьютер забрал", step2, "палочек")
             number4 = ""
@@ -47,8 +47,8 @@ while count <= 4: # повторяем пока еомпьютер не побе
             else:
                 sticks -= 2
                 number2 = 2
-            print("Осталось",sticks, "палочек")
-        elif sticks == 8:                            # это наверняка можно было слелать намного проще
+            print("Осталось", sticks, "палочек")
+        elif sticks == 8:  # это наверняка можно было слелать намного проще
             number2 = ""
             number4 = ""
             step2 = random.choice(glass8)
@@ -60,7 +60,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
                 sticks -= 2
                 number3 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks == 7:                              # но ничего другого мне в голову не пришло
+        elif sticks == 7:  # но ничего другого мне в голову не пришло
             number2 = ""
             number3 = ""
             step2 = random.choice(glass7)
@@ -78,7 +78,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
             sticks -= 1
         else:
             sticks -= 2
-        print("Осталось",sticks, "палочек")
+        print("Осталось", sticks, "палочек")
         if sticks == 7:
             number5 = ""
             number6 = ""
@@ -121,7 +121,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
         elif sticks == 4:
             step3 = random.choice(glass4)
             print("Компьютер забрал", step3, "палочек")
-            number5 = ""               # О, это я таким образом нашла способ убирать числа только из нужного стаканчика
+            number5 = ""  # О, это я таким образом нашла способ убирать числа только из нужного стаканчика
             number6 = ""
             number8 = ""
             number4 = ""
@@ -138,7 +138,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
             print("Компьютер забрал", step3, "палочек")
             number5 = ""
             number4 = ""
-            number6 = ""            # опять же, это наверняка можно было сделать проще
+            number6 = ""  # опять же, это наверняка можно было сделать проще
             number7 = ""
             number9 = ""
             if step3 == 1:
@@ -161,7 +161,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
                 Winner = "player"
             elif sticks == 0:
                 Winner = "player"
-        print("Осталось",sticks, "палочек")
+        print("Осталось", sticks, "палочек")
         if sticks == 5:
             step4 = random.choice(glass5)
             print("Компьютер забрал", step4, "палочек")
@@ -211,7 +211,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
                 number9 = 2
                 Winner = "player"
             print("Осталось", sticks, "палочек")
-        if sticks>=2:
+        if sticks >= 2:
             player = random.randint(1, 2)
             print("Игрок забрал", player, "палочек")
             if player == 1:
@@ -224,7 +224,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
                     Winner = "player"
                 elif sticks == 0:
                     Winner = "computer"
-            print("Осталось",sticks, "палочек")
+            print("Осталось", sticks, "палочек")
         if sticks == 3:
             step5 = random.choice(glass3)
             print("Компьютер забрал", step5, "палочек")
@@ -256,7 +256,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
             else:
                 Winner = "computer"
             print("Осталось", sticks, "палочек")
-        if Winner == "computer": # мы наконец дошли до добавления или убирания чисел
+        if Winner == "computer":  # мы наконец дошли до добавления или убирания чисел
             count += 1
             glass11.append(number0)
             if number2 == 1 or number2 == 2:
@@ -303,260 +303,260 @@ while count <= 4: # повторяем пока еомпьютер не побе
             if number9 == 1 or number9 == 2:
                 if len(glass2) != 1:
                     glass2.remove(number9)
-    elif Winner!="player": # теперь, если первый будет ходит игрок
-        sticks=11
-        player=random.randint(1,2)
+    elif Winner != "player":  # теперь, если первый будет ходит игрок
+        sticks = 11
+        player = random.randint(1, 2)
         print("Игрок забрал", player, "палочек")
-        if player==1:
-            sticks-=1
+        if player == 1:
+            sticks -= 1
         else:
-            sticks-=2
-        print("Осталось",sticks, "палочек")
-        if sticks==10:
-            step1=random.choice(glass10)
+            sticks -= 2
+        print("Осталось", sticks, "палочек")
+        if sticks == 10:
+            step1 = random.choice(glass10)
             print("Компьютер забрал", step1, "палочек")  # тут, вобщем-то, всё тоже самое
-            number2=""
-            if step1==1:
-                sticks-=1
-                number1=1
+            number2 = ""
+            if step1 == 1:
+                sticks -= 1
+                number1 = 1
             else:
-                sticks-=2
-                number1=2
+                sticks -= 2
+                number1 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==9:
-            step1=random.choice(glass9)
+        elif sticks == 9:
+            step1 = random.choice(glass9)
             print("Компьютер забрал", step1, "палочек")
-            number1= ""
-            if step1==1:
-                sticks-=1
-                number2=1
+            number1 = ""
+            if step1 == 1:
+                sticks -= 1
+                number2 = 1
             else:
-                sticks-=2
-                number2=2
+                sticks -= 2
+                number2 = 2
             print("Осталось", sticks, "палочек")
-        player=random.randint(1,2)
+        player = random.randint(1, 2)
         print("Игрок забрал", player, "палочек")
-        if player==1:
-            sticks-=1
+        if player == 1:
+            sticks -= 1
         else:
-            sticks-=2
-        print("Осталось",sticks, "палочек")
-        if sticks==8:
-            step2=random.choice(glass8)
+            sticks -= 2
+        print("Осталось", sticks, "палочек")
+        if sticks == 8:
+            step2 = random.choice(glass8)
             print("Компьютер забрал", step2, "палочек")
-            number4=""
-            number5=""
-            number6=""
-            if step2==1:
-                sticks-=1
-                number3=1
+            number4 = ""
+            number5 = ""
+            number6 = ""
+            if step2 == 1:
+                sticks -= 1
+                number3 = 1
             else:
-                sticks-=2
-                number3=2
+                sticks -= 2
+                number3 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==7:
-            step2=random.choice(glass7)
+        elif sticks == 7:
+            step2 = random.choice(glass7)
             print("Компьютер забрал", step2, "палочек")
-            number3=""
-            number5=""
-            number6=""
-            if step2==1:
-                sticks-=1
-                number4=1
+            number3 = ""
+            number5 = ""
+            number6 = ""
+            if step2 == 1:
+                sticks -= 1
+                number4 = 1
             else:
-                sticks-=2
-                number4=2
+                sticks -= 2
+                number4 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==6:
-            step2=random.choice(glass6)
+        elif sticks == 6:
+            step2 = random.choice(glass6)
             print("Компьютер забрал", step2, "палочек")
-            number3=""
-            number4=""
-            number6=""
-            if step2==1:
-                sticks-=1
-                number5=1
+            number3 = ""
+            number4 = ""
+            number6 = ""
+            if step2 == 1:
+                sticks -= 1
+                number5 = 1
             else:
-                sticks-=2
-                number5=2
+                sticks -= 2
+                number5 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==5:
-            number3=""
-            number4=""
-            number5=""
-            step2=random.choice(glass5)
+        elif sticks == 5:
+            number3 = ""
+            number4 = ""
+            number5 = ""
+            step2 = random.choice(glass5)
             print("Компьютер забрал", step2, "палочек")
-            if step2==1:
-                sticks-=1
-                number6=1
+            if step2 == 1:
+                sticks -= 1
+                number6 = 1
             else:
-                sticks-=2
-                number6=2
+                sticks -= 2
+                number6 = 2
             print("Осталось", sticks, "палочек")
-        player=random.randint(1,2)
+        player = random.randint(1, 2)
         print("Игрок забрал", player, "палочек")
-        if player==1:
-            sticks-=1
+        if player == 1:
+            sticks -= 1
         else:
-            sticks-=2
-            if sticks==1:
-                Winner="player"
+            sticks -= 2
+            if sticks == 1:
+                Winner = "player"
             print("Осталось", sticks, "палочек")
-        if sticks==6:
-            step3=random.choice(glass6)
+        if sticks == 6:
+            step3 = random.choice(glass6)
             print("Компьютер забрал", step3, "палочек")
-            number6=""
-            number7=""
-            number8=""
-            number9=""
-            if step3==1:
-                sticks-=1
-                number5=1
+            number6 = ""
+            number7 = ""
+            number8 = ""
+            number9 = ""
+            if step3 == 1:
+                sticks -= 1
+                number5 = 1
             else:
-                sticks-=2
-                number5=2
+                sticks -= 2
+                number5 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==5:
-            step3=random.choice(glass5)
+        elif sticks == 5:
+            step3 = random.choice(glass5)
             print("Компьютер забрал", step3, "палочек")
-            number5=""
-            number7=""
-            number8=""
-            number9=""
-            if step3==1:
-                sticks-=1
-                number6=1
+            number5 = ""
+            number7 = ""
+            number8 = ""
+            number9 = ""
+            if step3 == 1:
+                sticks -= 1
+                number6 = 1
             else:
-                sticks-=2
-                number6=2
+                sticks -= 2
+                number6 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==4:
-            step3=random.choice(glass4)
+        elif sticks == 4:
+            step3 = random.choice(glass4)
             print("Компьютер забрал", step3, "палочек")
-            number6=""
-            number5=""
-            number8=""
-            number9=""
-            if step3==1:
-                sticks-=1
-                number7=1
+            number6 = ""
+            number5 = ""
+            number8 = ""
+            number9 = ""
+            if step3 == 1:
+                sticks -= 1
+                number7 = 1
             else:
-                sticks-=2
-                number7=2
+                sticks -= 2
+                number7 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==3:
-            step3=random.choice(glass3)
+        elif sticks == 3:
+            step3 = random.choice(glass3)
             print("Компьютер забрал", step3, "палочек")
-            number6=""
-            number7=""
-            number5=""
-            number9=""
-            if step3==1:
-                sticks-=1
-                number8=1
+            number6 = ""
+            number7 = ""
+            number5 = ""
+            number9 = ""
+            if step3 == 1:
+                sticks -= 1
+                number8 = 1
             else:
-                sticks-=2
-                number8=2
-                Winner="computer"
+                sticks -= 2
+                number8 = 2
+                Winner = "computer"
             print("Осталось", sticks, "палочек")
-        elif sticks==2:
-            step3=random.choice(glass2)
+        elif sticks == 2:
+            step3 = random.choice(glass2)
             print("Компьютер забрал", step3, "палочек")
-            number6=""
-            number7=""
-            number8=""
-            number5=""
-            if step3==1:
-                sticks-=1
-                number9=1
-                Winner="computer"
+            number6 = ""
+            number7 = ""
+            number8 = ""
+            number5 = ""
+            if step3 == 1:
+                sticks -= 1
+                number9 = 1
+                Winner = "computer"
             else:
-                sticks-=2
-                number9=2
-                Winner="player"
+                sticks -= 2
+                number9 = 2
+                Winner = "player"
             print("Осталось", sticks, "палочек")
-        if sticks>=2:
-            player=random.randint(1,2)
+        if sticks >= 2:
+            player = random.randint(1, 2)
             print("Игрок забрал", player, "палочек")
-            if player==1:
-                sticks-=1
-                if sticks==1:
-                    Winner="player"
+            if player == 1:
+                sticks -= 1
+                if sticks == 1:
+                    Winner = "player"
             else:
-                sticks-=2
-                if sticks==1:
-                    Winner="player"
-                elif sticks==0:
-                    Winner="computer"
-            print("Осталось",sticks, "палочек")
-        if sticks==4:
-            step4=random.choice(glass4)
-            print("Компьютер забрал", step4, "палочек")
-            number8=""
-            number9=""
-            if step4==1:
-                sticks-=1
-                number7=1
-            else:
-                sticks-=2
-                number7=2
+                sticks -= 2
+                if sticks == 1:
+                    Winner = "player"
+                elif sticks == 0:
+                    Winner = "computer"
             print("Осталось", sticks, "палочек")
-        elif sticks==3:
-            step4=random.choice(glass3)
+        if sticks == 4:
+            step4 = random.choice(glass4)
             print("Компьютер забрал", step4, "палочек")
-            number7=""
-            number9=""
-            if step4==1:
-                sticks-=1
-                number8=1
+            number8 = ""
+            number9 = ""
+            if step4 == 1:
+                sticks -= 1
+                number7 = 1
             else:
-                sticks-=2
-                number8=2
-                Winner="computer"
+                sticks -= 2
+                number7 = 2
             print("Осталось", sticks, "палочек")
-        elif sticks==2:
-            step4=random.choice(glass2)
+        elif sticks == 3:
+            step4 = random.choice(glass3)
             print("Компьютер забрал", step4, "палочек")
-            number8=""
-            number7=""
-            if step4==1:
-                sticks-=1
-                number9=1
-                Winner="computer"
+            number7 = ""
+            number9 = ""
+            if step4 == 1:
+                sticks -= 1
+                number8 = 1
             else:
-                sticks-=2
-                number9=2
-                Winner="player"
+                sticks -= 2
+                number8 = 2
+                Winner = "computer"
             print("Осталось", sticks, "палочек")
-        if sticks>=2:
-            player=random.randint(1,2)
+        elif sticks == 2:
+            step4 = random.choice(glass2)
+            print("Компьютер забрал", step4, "палочек")
+            number8 = ""
+            number7 = ""
+            if step4 == 1:
+                sticks -= 1
+                number9 = 1
+                Winner = "computer"
+            else:
+                sticks -= 2
+                number9 = 2
+                Winner = "player"
+            print("Осталось", sticks, "палочек")
+        if sticks >= 2:
+            player = random.randint(1, 2)
             print("Игрок забрал", player, "палочек")
-            if player==1:
-                sticks-=1
-                if sticks==1:
-                    Winner="player"
+            if player == 1:
+                sticks -= 1
+                if sticks == 1:
+                    Winner = "player"
             else:
-                sticks-=2
-                if sticks==1:
-                    Winner="player"
-                elif sticks==0:
-                    Winner="computer"
+                sticks -= 2
+                if sticks == 1:
+                    Winner = "player"
+                elif sticks == 0:
+                    Winner = "computer"
             print("Осталось", sticks, "палочек")
-        if sticks==2:
-            step5=random.choice(glass2)
+        if sticks == 2:
+            step5 = random.choice(glass2)
             print("Компьютер забрал", step5, "палочек")
-            if step5==1:
-                sticks-=1
-                number9=1
-                Winner="computer"
+            if step5 == 1:
+                sticks -= 1
+                number9 = 1
+                Winner = "computer"
             else:
-                sticks-=2
-                number9=2
-                Winner="player"
+                sticks -= 2
+                number9 = 2
+                Winner = "player"
             print("Осталось", sticks, "палочек")
         if Winner == "computer":
             count += 1
-            if number1==1 or number1==2:
+            if number1 == 1 or number1 == 2:
                 glass10.append(number1)
             if number2 == 1 or number2 == 2:
                 glass9.append(number2)
@@ -576,7 +576,7 @@ while count <= 4: # повторяем пока еомпьютер не побе
                 glass2.append(number9)
         else:
             count = 0
-            if number1==1 or number1==2:
+            if number1 == 1 or number1 == 2:
                 if len(glass10) != 1:
                     glass10.remove(number1)
             if number2 == 1 or number2 == 2:
@@ -603,5 +603,8 @@ while count <= 4: # повторяем пока еомпьютер не побе
             if number9 == 1 or number9 == 2:
                 if len(glass2) != 1:
                     glass2.remove(number9)
-    print("Победил",Winner) # ну, и кто победил в итоге
+    print("Победил", Winner)  # ну, и кто победил в итоге
 # вроде как работает :)
+
+# +-OK. Как-то работает, наверное. Но, во-первых, где функции (а лучше классы)? А, во-вторых, в конце нет вывода
+# содержимого стаканов и вероятностей выбора по каждому стакану. Поэтому только "хорошо", а не "отлично".
