@@ -1,5 +1,6 @@
-import simple_draw as sd
 import random
+
+import simple_draw as sd
 
 """
 Задача: написать программу, выводящую на экран праздничный салют
@@ -21,7 +22,6 @@ height = 700
 sd.set_screen_size(width, height)
 sd._init()
 
-
 center = sd.get_point(width / 2, height / 2)
 
 
@@ -30,12 +30,9 @@ class Firework:
         sd.circle(sd.get_point(x, y), 10, sd.random_color(), 0)
 
 
-
-
 class FireworkCenter(Firework):
     for i in range(1000):
         Firework.fireworks(center.x + random.randint(-150, 150), center.y + random.randint(-150, 150))
-
 
 
 class FireworkAround(Firework):
@@ -47,7 +44,6 @@ class FireworkAround(Firework):
         for i in range(300):
             Firework.fireworks(center.x + random.randint(-250, -150) + 400 * indent,
                                center.y + random.randint(-350, -250))
-
 
 
 class Balloon:
@@ -64,8 +60,9 @@ class Balloon:
         sd.line(sd.get_point(point.x - 5, point.y - 100), sd.get_point(point.x + 5, point.y - 120))
 
 
-
 for i in range(10):
     Balloon.balloon(sd.random_point())
 
 sd.pause()
+
+# +-OK. Пуцки не того цвета, отступы не подравнял. Недостаточно комментариев -- происходящее внутри функций тоже надо каментить.
