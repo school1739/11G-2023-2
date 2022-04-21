@@ -35,4 +35,3 @@
 #     lines = my_file.readlines()
 #     lines_set = set(lines)
 #     print(lines_set)
-# my_file.close()
