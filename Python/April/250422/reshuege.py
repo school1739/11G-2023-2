@@ -1,3 +1,5 @@
+# EGE 24
+
 """count = 1
 max_count = 1
 
@@ -11,7 +13,10 @@ with open("zadanie24_2.txt", "r") as file:
             count = 1
     print(max_count)"""
 
-with open("27886.txt", "r") as file:
+
+# EGE 26
+
+"""with open("27886.txt", "r") as file:
     lines = file.readlines()
     first_line = lines.pop(0).split()
     # print(first_line)
@@ -42,4 +47,4 @@ with open("27886.txt", "r") as file:
             big_line = line
 
     print(backup_size, backup_count, max_line, big_line)
-    print(backup_count, big_line)
+    print(backup_count, big_line)"""
