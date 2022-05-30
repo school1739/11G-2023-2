@@ -82,3 +82,5 @@ with open('26.txt', 'r') as file:  # открываем файл для чтен
             money_1 += int(B_goods[B_count])
 
 print(B_count, money_1)  # выводим кол-во товара В и оставшиеся деньги
+
+# OK
