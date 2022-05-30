@@ -7,3 +7,17 @@ Reminder:
 + Используйте Ctrl+Alt+L для форматирования.
 + Переменные называем осмысленно (см. PEP8, Function and Variable Names). За названия, не соответстующие PEP8 снижу оценки).
 """
+
+count = 1  # Количество знаков идущих подряд символов
+max_count = 1  # Максимальное количество идущих подряд символов
+
+with open("24.txt", 'r') as file:  # Открыть сам файл
+    text = file.read()  # Чтение файла
+    for L in range(len(text) - 1):  # Проверяем буквы через цикл
+        if text[L] == "S" or text[L]=="Q" or text[L]=="R" or text[L]=="P" and text[L+1]!="P":  # Проверяем условие
+            count += 1
+            max_count = max(max_count, count)  # Обновление
+        else:  # Иначе
+            count = 1
+
+print(max_count)  # Вывод
