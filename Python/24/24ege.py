@@ -20,3 +20,5 @@ for i in range(len(s)):
     last_sign = s[i]
 # выводим результат
 print(max_count)
+
+# OK, Alexander Karabutov
