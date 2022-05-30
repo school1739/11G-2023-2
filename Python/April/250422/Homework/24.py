@@ -27,3 +27,5 @@ with open("24.txt", 'r') as file:  # open for reading
             counter = 1  # otherwise counter is the same
 
 print(max_counter)  # display the max value
+
+# OK

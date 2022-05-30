@@ -95,3 +95,5 @@ with open('26.txt', 'r') as file:  # open for reading
             first_money += int(B_products[B_counter])
 
 print(B_counter, first_money)  # display the quantity of products B and the rest of money
+
+# OK
