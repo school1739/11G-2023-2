@@ -21,3 +21,5 @@ print(max(spisok_vseh_count))#ну и выводим сколько таких �
 
 
 #print(type(stroka))
+
+# OK

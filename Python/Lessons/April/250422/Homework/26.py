@@ -79,3 +79,5 @@
 ####print(otdel_cost_for_sort)
 ####print(ottdel_cost_tovar)
 ####print(all_cost, all_tovari)
+
+# NOT OK, whatever
