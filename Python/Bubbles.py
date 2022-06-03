@@ -55,3 +55,5 @@ for i in range(10):
     x+=50
     circle(x, 200, 3)
 sd.pause()
+
+# OK
