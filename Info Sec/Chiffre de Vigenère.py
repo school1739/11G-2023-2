@@ -3,37 +3,42 @@
 # Величину сдвига задают ключевым словом.
 # Например слово БАЗА означает последовательность сдвигов исходных букв: 219121912191...
 
-alphabet_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
-key_list=[]
-print("Выбирите язык, указав его порядковый номер.")
-print("1. Русский")
-print("2. Английский")
-n = input("Введите номер: ")
-if n =="1":
-    key_text = str.upper(input("KEY: "))
-    plain_text = str.upper(input("PLAIN: "))
-    
-    for key in key_text:
-        key_list+=key
-    if len(key_text)<len(plain_text):
-        for _ in range((len(plain_text)-len(key_text))//2+1):
-            key_list+=key_list
-    for i in range (len(plain_text)):
-        plain_index = alphabet_RU.find(plain_text[i])
-        key_index = alphabet_RU.find(key_list[i])+1
-        print(alphabet_RU[plain_index+key_index])
-else:
-    key_text = input("KEY: ")
-    plain_text = input("PLAIN: ")
 
+alf = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+#ну и снова таки, про русский ни слова не было, прошу заметить:) там все тоже  просто, но вместо alf будет alf_1 и alf_2:)
+choice = int(input("1 - шифрование, 2 - дешифрование --> "))
 
-    for key in key_text:
-        key_list+=key
-    if len(key_text) < len(plain_text):
-        for _ in range(len(plain_text) - len(key_text)):
-            key_list += key_list
-    for i in range(len(plain_text)):
-        plain_index = alphabet_EU.find(plain_text[i])
-        key_index = alphabet_EU.find(key_list[i])+1
-        print(alphabet_EU[plain_index+key_index])
+def shifr(slovo_key):
+    global alf
+    slovo_for_shifr = input("Введите слово, которое хотите зашифровать --> ").upper()
+    sdvig, ish_index, itog_indx= [], [], [] #Пустые массивчики для будущих штучек:)
+    itog_stroka_shifr = ""
+    for i in slovo_key: sdvig.append(alf.find(i)+1) #получается создали массив со всеми сдвигами
+    #А и +1 ставим из-за того, что при букве A берет 0, значит считает не сдвиг, а индекс, значит плюсуем единицу
+    sdvig *= 1000 #ну а вдруг слово юзера будет большим(если очень большим, то добавить пару ноликов еще можно):) что-то более умное придумывать не хочу:)))
+    for i in slovo_for_shifr: ish_index.append(alf.find(i)) #создали массив со всеми исхожными индексами
+    for i in range(len(ish_index)): itog_indx.append(ish_index[i] + sdvig[i])#нашли итоговый сдвиг для каждой буквы
+    for i in itog_indx: itog_stroka_shifr += str(alf[i]) #усе, халява:)
+    return itog_stroka_shifr
+ #лично я считаю код элегантным и простым:) и самое главное - думать много не надо:)
+
+def deshifr(slovo_key): #вот прям один в один как прошлое, только в формировании itog_indx "-" вместо "+"
+    global alf
+    slovo_for_deshifr = input("Введите слово, которое хотите дешифровать --> ").upper()
+    sdvig, posle_shifr_index, itog_indx = [], [], []  # Пустые массивчики для будущих штучек:)
+    itog_stroka_deshifr = ""
+    for i in slovo_for_deshifr: posle_shifr_index.append(alf.find(i) + 1)
+    for i in slovo_key: sdvig.append(alf.find(i) + 1)
+    sdvig *= 1000
+    for i in range(len(posle_shifr_index)): itog_indx.append((posle_shifr_index[i] - sdvig[i]) - 1)
+    for i in itog_indx: itog_stroka_deshifr += str(alf[i])  # усе, халява:)
+    return itog_stroka_deshifr
+
+if choice == 1: #ну и вызовы тута всякие
+    slovo_key = input("Введите ключевое слово --> ").upper()
+    print(shifr(slovo_key))
+
+if choice == 2: #ну и вызовы тута всякие
+    slovo_key = input("Введите ключевое слово --> ").upper()
+    print(deshifr(slovo_key))
+
