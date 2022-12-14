@@ -18,6 +18,13 @@ if nomer_yazyka == "1": # если выбрали русский язык
         for l in text:
             if l == " ":
                 answer += " "
+            elif l == "#":
+                answer += "#"
+            elif l == "-":
+                answer += "-"
+            elif l == "1":
+                answer += "1"
+
             else:
                 answer += alphabet_RU[(alphabet_RU.index(l) + key) % len(alphabet_RU)] # получаем ответ
         print("Рузультат:", answer) # выводим ответ
@@ -26,6 +33,10 @@ if nomer_yazyka == "1": # если выбрали русский язык
         for l in text:
             if l == " ":
                 answer += " "
+            elif l == "#":
+                answer += "#"
+            elif l == "-":
+                answer += "-"
             else:
                 answer += alphabet_RU[(alphabet_RU.index(l) - key) % len(alphabet_RU)]
         print("Рузультат:", answer)
