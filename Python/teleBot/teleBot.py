@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.Telebot("5829625388:AAHPfkoEGOh1DG-Gpw-s6Qtu7cUh1buGUt0")
+bot = telebot.TeleBot("5829625388:AAHPfkoEGOh1DG-Gpw-s6Qtu7cUh1buGUt0")
 
 @bot.message_handler(commands=['start'])
 def url(message):
@@ -14,9 +14,19 @@ def url(message):
 def get_text_message(message):
     if message.text == "Привет":
         bot.send_message(message.from_user.id, "Привет, человек")
-    if message.text == "На сайт":
+    elif message.text == "На сайт":
         bot.send_message(message.from_user.id, "https://педобраз.рф")
-    if message.text == "help":
+    elif message.text == "help":
         bot.send_message(message.from_user.id, "Нажми на кнопку и получишь результат")
-    if message.text == "/help":
+    elif message.text == "/help":
         bot.send_message(message.from_user.id, "Это кнопка хелпы")
+    elif message.text == "Пришли картинку":
+        bot.send_photo(message.from_user.id, "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Sandkat1_%28Felis_margarita%29.jpg/800px-Sandkat1_%28Felis_margarita%29.jpg")
+    elif message.text == "Пришли анимацию":
+        bot.send_video(message.from_user.id, "sample-5s.mp4")
+    elif message.text == "Пришли документ":
+        bot.send_document(message.from_user.id, "27-A_demo.txt")
+        bot.send_message(message.from_user.id, "Вот тебе 27-ое задание егэ")
+    elif message.text == "Пришли стикер":
+        bot.send_message(message.from_user.id, "Не, бро, лажа, не сделано еще")
+        bot.send_sticker(message.from_user.id, "")
