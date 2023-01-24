@@ -1,5 +1,6 @@
 import telebot
 from telebot import types
+import google.cloud.dialogflow_v2 as dialogflow
 
 bot = telebot.TeleBot("5829625388:AAHPfkoEGOh1DG-Gpw-s6Qtu7cUh1buGUt0")
 
@@ -30,3 +31,5 @@ def get_text_message(message):
     elif message.text == "Пришли стикер":
         bot.send_message(message.from_user.id, "Не, бро, лажа, не сделано еще")
         bot.send_sticker(message.from_user.id, "CAACAgIAAxkBAAJfil-7g5saK6caYV8CsqELuWLynDH2AALiBgACOtEHAAFgVDNflxcX6h4E")
+
+bot.polling()
