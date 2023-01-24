@@ -22,11 +22,11 @@ def get_text_message(message):
         bot.send_message(message.from_user.id, "Это кнопка хелпы")
     elif message.text == "Пришли картинку":
         bot.send_photo(message.from_user.id, "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Sandkat1_%28Felis_margarita%29.jpg/800px-Sandkat1_%28Felis_margarita%29.jpg")
-    elif message.text == "Пришли анимацию":
-        bot.send_video(message.from_user.id, "sample-5s.mp4")
+    elif message.text == "Пришли анимацию(Видео)":
+        bot.send_video(message.from_user.id, "Вот это поворот!.mp4")
     elif message.text == "Пришли документ":
         bot.send_document(message.from_user.id, "27-A_demo.txt")
         bot.send_message(message.from_user.id, "Вот тебе 27-ое задание егэ")
     elif message.text == "Пришли стикер":
         bot.send_message(message.from_user.id, "Не, бро, лажа, не сделано еще")
-        bot.send_sticker(message.from_user.id, "")
+        bot.send_sticker(message.from_user.id, "CAACAgIAAxkBAAJfil-7g5saK6caYV8CsqELuWLynDH2AALiBgACOtEHAAFgVDNflxcX6h4E")
